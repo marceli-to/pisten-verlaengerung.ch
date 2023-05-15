@@ -9,3 +9,7 @@ input[type='number'],
 textarea,
 select {
 }
+
+input::file-selector-button {
+  @apply text-sm text-white cursor-pointer p-5 p-10 mr-20 border-0 ring-0 focus:ring-0 w-auto bg-midnight
+}

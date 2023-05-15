@@ -1,5 +1,5 @@
 title: Pages
-template: templates/default
+template: templates/content/default
 layout: templates/layout
 revisions: false
 route: '{parent_uri}/{slug}'
@@ -8,6 +8,7 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+    refresh: true
 structure:
   root: true
   slugs: true

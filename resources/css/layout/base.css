@@ -4,7 +4,22 @@
 
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 body {
+  @apply flex min-h-screen flex-col;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  @apply flex-1;
+}
+
+.container {
+  @apply max-w-[1280px] px-20 md:px-40 mx-auto;
+}
+
+strong {
+  @apply font-bold;
 }

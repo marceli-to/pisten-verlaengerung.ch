@@ -13,58 +13,41 @@ sections:
       -
         handle: content
         field:
-          type: markdown
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: false
           display: Content
-          localizable: true
-  settings:
-    display: Settings
-    fields:
-      -
-        handle: menu_category
-        field:
-          options:
-            main: Main
-            meta: Meta
-          multiple: false
-          clearable: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          default: main
-          display: 'Menu category'
-          type: select
-          icon: select
+          type: bard
+          icon: bard
           listable: hidden
           instructions_position: above
           visibility: visible
-          validate:
-            - required
-      -
-        handle: theme
-        field:
-          options:
-            midnight: Midnight
-            burgundy: Burgundy
-          multiple: false
-          clearable: false
-          searchable: true
-          taggable: false
-          push_tags: false
-          cast_booleans: false
-          default: burgundy
-          display: Theme
-          type: select
-          icon: select
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-      -
-        handle: template
-        field:
-          type: template
-          display: Template
-          localizable: true
   sidebar:
     display: Sidebar
     fields:
@@ -73,6 +56,18 @@ sections:
         field:
           type: slug
           localizable: true
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          hide_partials: true
+          blueprint: false
+          folder: templates/content
       -
         handle: parent
         field:

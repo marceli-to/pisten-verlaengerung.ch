@@ -2,8 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\TranslationController;
-use App\Http\Controllers\Api\InquiryController;
+use App\Http\Controllers\Api\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +15,5 @@ use App\Http\Controllers\Api\InquiryController;
 |
 */
 
-Route::get('/translations/{locale}', [TranslationController::class, 'fetch']);
-Route::post('/inquiry', [InquiryController::class, 'store']);
+Route::post('/form/testimonial', [FormController::class, 'storeTestimonial']);
 

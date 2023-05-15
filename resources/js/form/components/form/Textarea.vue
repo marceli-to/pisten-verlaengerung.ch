@@ -5,7 +5,7 @@
     :value="modelValue"
     :placeholder="placeholder"
     @input="updateInput"
-    class="border-0 ring-0 focus:ring-0 px-0 py-0 w-full text-md placeholder:text-md placeholder:text-midnight-300 text-midnight-500">
+    :class="[$props.error ? 'bg-rosewater' : 'bg-cloud-mist', 'border-0 ring-0 focus:ring-0 px-10 py-20 min-h-[150px] w-full text-md placeholder:text-sm placeholder:leading-none placeholder:text-midnight']">
   </textarea>
 </template>
 <script>
@@ -31,6 +31,11 @@ export default {
     placeholder: {
       type: String,
       default: "",
+    },
+
+    error: {
+      type: Boolean,
+      default: false,
     },
   },
 

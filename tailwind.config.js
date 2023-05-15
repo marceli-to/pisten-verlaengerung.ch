@@ -13,33 +13,21 @@ module.exports = {
     extend: {
       
       colors: {
-        'burgundy': '#87362b',
+        'midnight': '#374974',
+        'misty-blue': '#9ba4bb',
+        'cloud-mist': '#eaecf1',
+        'rosewater': '#ffefef',
       },
 
+      fontFamily: {
+        'light': ['davis-sans', ...defaultTheme.fontFamily.sans],
+        'bold': ['davis-sans', ...defaultTheme.fontFamily.sans],
+      },
 
       fontSize: {
-        'xxs': '0.5rem',    // 10px
-        'xs': '0.75rem',    // 12px -- small font size
-        'sm': '0.875rem',   // 14px
-        'base': '1rem',     // 16px
-        'md': '1.125rem',   // 18px -- regular font size
-        'lg': '1.25rem',    // 20px
-        'xl': '1.6rem',     // 25px -- large font size
-        '2xl': '1.75rem',   // 28px
-        '3xl': '3rem',      // not in use
-        '4xl': '4rem',      // not in use
-        '5xl': '5rem',      // not in use
-      },
-
-      gridTemplateColumns: {
-        '16': 'repeat(16, minmax(0, 1fr))',
-      },
-
-      gridColumn: {
-        'span-13': 'span 13 / span 13',
-        'span-14': 'span 14 / span 14',
-        'span-15': 'span 15 / span 15',
-        'span-16': 'span 16 / span 16',
+        'sm': '1.375rem',   // 22px
+        'md': '1.625rem',   // 26px
+        'lg': '2rem',       // 32px
       },
     },
 

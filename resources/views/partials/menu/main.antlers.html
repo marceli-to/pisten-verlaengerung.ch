@@ -1,13 +1,11 @@
-<a href="javascript:;" class="btn-menu" data-menu-btn>
+{{# <a href="javascript:;" class="btn-menu" data-menu-btn>
   {{ partial:icons/burger }}
   {{ partial:icons/cross }}
-</a>
+</a> #}}
 <nav class="site-menu" data-menu>
-  <div class="flex flex-col justify-between w-full h-full pb-20 pt-30 pr-30">
-    <ul>
-      {{ nav:collection:pages menu_category:is="main" sort="order" }}
-        {{ partial:menu/item :text="title" :url="url" target="_self" }}
-      {{ /nav:collection:pages }}
-    </ul>
-  </div>
+  <ul>
+    {{ nav:collection:pages sort="order" }}
+      {{ partial:menu/item :text="title" :url="url" target="_self" }}
+    {{ /nav:collection:pages }}
+  </ul>
 </nav>

@@ -1,15 +1,19 @@
 <template>
   <div class="relative">
-    <label :for="id" class="break-words block hyphens-auto font-regular-italic text-midnight-300 cursor-pointer pl-20 select-none">
+    <label :for="id" class="break-words block hyphens-auto cursor-pointer pl-70 select-none">
       <input
         :id="id"
         type="checkbox"
         :value="modelValue"
         :placeholder="placeholder"
         @input="updateInput"
-        class="opacity-0 absolute cursor-pointer h-0 w-0 t-8"
+        class="opacity-0 absolute cursor-pointer h-0 w-0"
       />
-      <span class="block w-12 h-12 rounded-full border border-midnight-300 absolute left-0 top-8"></span>
+      <span class="block bg-cloud-mist w-50 h-50 absolute left-0 top-6 flex items-center justify-center">
+        <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden text-midnight w-36 h-auto">
+          <path d="M22.92 4.304L19.157 0.541003L8.668 11.03L3.922 6.284L0.158997 10.047L8.66699 18.555L22.92 4.304Z" fill="currentColor"/>
+        </svg>
+      </span>
       <slot name="label"></slot>
     </label>
   </div>
@@ -50,16 +54,7 @@ export default {
 </script>
 
 <style scoped>
-input[type="checkbox"]:checked ~ span::before {
-  @apply rounded-full bg-midnight-500 w-6 h-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
-  content: "";
-}
-
-input[type="checkbox"]:checked ~ span {
-  @apply border-midnight-500;
-}
-
-label:has(input[type="checkbox"]:checked) {
-  @apply text-midnight-500;
+input[type="checkbox"]:checked ~ span svg {
+  @apply block
 }
 </style>
