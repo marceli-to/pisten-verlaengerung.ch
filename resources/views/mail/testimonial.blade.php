@@ -1,6 +1,6 @@
 <x-mail::message>
 <div class="text-base font-bold pb-large">
-  Neuer Testimonial
+  Neues Testimonial
 </div>
 <div class="text-base pb-base">
   <strong>Vorname</strong><br>
