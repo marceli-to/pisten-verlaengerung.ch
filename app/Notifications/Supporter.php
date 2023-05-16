@@ -5,7 +5,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class Inquiry extends Notification
+class Supporter extends Notification
 {
   use Queueable;
 
@@ -39,9 +39,9 @@ class Inquiry extends Notification
   public function toMail($notifiable)
   {
     return (new MailMessage)
-      ->from('no-reply@pisten-verlaengerung.ch')
-      ->subject('Buchungsanfrage')
-      ->markdown('mail.inquiry', ['data' => $this->data]);
+      ->from('no-reply@pistenverlaengerung.ch')
+      ->subject('Pistenverlängerung – Unterstützer')
+      ->markdown('mail.supporter', ['data' => $this->data]);
   }
 
   /**

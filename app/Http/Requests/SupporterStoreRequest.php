@@ -2,7 +2,7 @@
 namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
-class TestimonialStoreRequest extends FormRequest
+class SupporterStoreRequest extends FormRequest
 {
   /**
    * Determine if the user is authorized to make this request.
@@ -24,11 +24,9 @@ class TestimonialStoreRequest extends FormRequest
   public function rules()
   {
     return [
-      'firstname' => 'required',
-      'name' => 'required',
-      'location' => 'required',
-      'quote' => 'required',
-      'image' => 'image|mimes:jpeg,png,jpg|max:16384',
+      'organisation' => 'required',
+      'website' => 'required',
+      'image' => 'image|mimes:jpeg,png,jpg,eps,tiff,svg|max:16384',
     ];
   }
 
@@ -41,12 +39,10 @@ class TestimonialStoreRequest extends FormRequest
   public function messages()
   {
     return [
-      'firstname.required' => 'Vorname fehlt',
-      'name.required' => 'Name fehlt',
-      'location.required' => 'Wohnort fehlt',
-      'quote.required' => 'Zitat fehlt',
+      'organisation.required' => 'Organisation fehlt',
+      'website.required' => 'Webseite fehlt',
       'image.image' => 'Bild fehlt',
-      'image.mimes' => 'Bildtyp ungültig (erlaubt sind JPG, PNG, GIF)',
+      'image.mimes' => 'Bildtyp ungültig (erlaubt sind JPG, PNG, GIF, EPS, TIFF, SVG)',
       'image.max' => 'Bild zu gross (max. 16MB)',
     ];
   }

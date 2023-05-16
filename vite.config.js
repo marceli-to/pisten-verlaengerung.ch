@@ -15,6 +15,7 @@ export default defineConfig({
     laravel([
       'resources/js/app.js',
       'resources/js/form/testimonial.js',
+      'resources/js/form/supporter.js',
     ]),
   ],
 });

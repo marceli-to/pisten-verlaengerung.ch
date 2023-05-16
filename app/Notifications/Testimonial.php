@@ -5,7 +5,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class Confirmation extends Notification
+class Testimonial extends Notification
 {
   use Queueable;
 
@@ -39,9 +39,9 @@ class Confirmation extends Notification
   public function toMail($notifiable)
   {
     return (new MailMessage)
-      ->from('no-reply@pisten-verlaengerung.ch')
-      ->subject('Ihre Buchungsanfrage')
-      ->markdown('mail.confirmation', ['data' => $this->data]);
+      ->from('no-reply@pistenverlaengerung.ch')
+      ->subject('Pistenverlängerung – neues Testimonial')
+      ->markdown('mail.testimonial', ['data' => $this->data]);
   }
 
   /**

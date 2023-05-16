@@ -1,26 +1,40 @@
 {
+  "_vue-axios.esm.min-88667e02.js": {
+    "css": [
+      "assets/vue-axios.esm-2f5c7dac.css"
+    ],
+    "file": "assets/vue-axios.esm.min-88667e02.js"
+  },
   "resources/js/app.css": {
-    "file": "assets/app-0088338c.css",
+    "file": "assets/app-cea5c8c6.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-0088338c.css"
+      "assets/app-cea5c8c6.css"
     ],
-    "file": "assets/app-98a8d568.js",
+    "file": "assets/app-5237227d.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
-  "resources/js/form/testimonial.css": {
-    "file": "assets/testimonial-2f5c7dac.css",
-    "src": "resources/js/form/testimonial.css"
+  "resources/js/form/supporter.js": {
+    "file": "assets/supporter-6ac1970f.js",
+    "imports": [
+      "_vue-axios.esm.min-88667e02.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/form/supporter.js"
   },
   "resources/js/form/testimonial.js": {
-    "css": [
-      "assets/testimonial-2f5c7dac.css"
+    "file": "assets/testimonial-a14cad37.js",
+    "imports": [
+      "_vue-axios.esm.min-88667e02.js"
     ],
-    "file": "assets/testimonial-83b1d674.js",
     "isEntry": true,
     "src": "resources/js/form/testimonial.js"
+  },
+  "vue-axios.esm.css": {
+    "file": "assets/vue-axios.esm-2f5c7dac.css",
+    "src": "vue-axios.esm.css"
   }
 }

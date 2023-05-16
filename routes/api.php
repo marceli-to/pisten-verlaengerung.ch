@@ -16,4 +16,6 @@ use App\Http\Controllers\Api\FormController;
 */
 
 Route::post('/form/testimonial', [FormController::class, 'storeTestimonial']);
+Route::post('/form/supporter', [FormController::class, 'storeSupporter']);
+
 

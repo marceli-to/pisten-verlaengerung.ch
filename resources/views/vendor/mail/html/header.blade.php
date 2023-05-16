@@ -1,6 +1,6 @@
 @props(['url'])
 <tr>
-<td class="header">
-  {{-- <img src="{{ config('app.url') }}/img/allreal-logo.png" title="Allreal Logo" alt="Allreal Logo" height="39" width="150" style="display:inline; height: auto; width: 125px;"> --}}
-</td>
+  <td class="header">
+    <img class="logo" src="{{ config('app.url') }}/img/logo.png" title="Pistenverlängerung" alt="Pistenverlängerung" height="212" width="200" style="display:block; height:auto; width: 200px;">
+  </td>
 </tr>
