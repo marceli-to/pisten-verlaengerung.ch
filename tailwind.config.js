@@ -25,9 +25,18 @@ module.exports = {
       },
 
       fontSize: {
+
+        'xxs': '1rem',      // 16px
+        'xs': '1.125rem',   // 18px
         'sm': '1.375rem',   // 22px
-        'md': '1.625rem',   // 26px
-        'lg': '2rem',       // 32px
+
+        'base': '1.125rem',  // 18px
+        'md': '1.375rem',    // 22px
+        'lg': '1.625rem',    // 26px
+
+        'xl': '1.375rem',    // 22px
+        '2xl': '1.625rem',   // 26px
+        '3xl': '2rem',       // 32px
       },
     },
 

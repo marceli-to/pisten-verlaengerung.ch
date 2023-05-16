@@ -23,3 +23,7 @@ main {
 strong {
   @apply font-bold;
 }
+
+p {
+  @apply mb-16 md:mb-20 xl:mb-24
+}

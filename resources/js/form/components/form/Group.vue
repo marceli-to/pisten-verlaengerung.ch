@@ -1,5 +1,5 @@
 <template>
-  <div :class="[error ? '' : '', 'mb-40 relative']">
+  <div :class="[error ? '' : '', 'mb-20 md:mb-30 xl:mb-40 relative']">
     <slot />
 
     <icon-valid v-if="error === false" />

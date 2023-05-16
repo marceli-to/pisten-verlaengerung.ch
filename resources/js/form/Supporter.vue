@@ -30,8 +30,8 @@
         </form-group>
 
 
-        <form-group class="bg-cloud-mist text-sm px-10 py-20" :error="errors.image">
-          <div class="text-sm mb-20">Logo*</div>
+        <form-group class="bg-cloud-mist text-xxs md:text-xs xl:text-sm px-10 py-20" :error="errors.image">
+          <div class="text-xxs md:text-xs xl:text-sm mb-20">Logo*</div>
           <input type="file" @change="fileChange" maxlength="1" ref="file" accept="image/png, image/jpeg" />
           <div class="mt-20">Sofern möglich als EPS, erlaubt sind JPG, PNG, EPS, TIFF, max. 8MB</div>
         </form-group>
@@ -51,7 +51,6 @@ import NProgress from 'nprogress';
 import FormGroup from '@/form/components/form/Group.vue';
 import FormLabel from '@/form/components/form/Label.vue';
 import FormInput from '@/form/components/form/Input.vue';
-import FormUpload from '@/form/components/form/Upload.vue';
 import FormCheckbox from '@/form/components/form/Checkbox.vue';
 import FormTextarea from '@/form/components/form/Textarea.vue';
 import ValidationErrors from '@/form/components/form/ValidationErrors.vue';
@@ -63,7 +62,6 @@ export default {
     FormGroup,
     FormLabel,
     FormInput,
-    FormUpload,
     FormTextarea,
     FormCheckbox,
     ValidationErrors,
