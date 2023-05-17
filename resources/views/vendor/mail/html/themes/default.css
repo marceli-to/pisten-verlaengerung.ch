@@ -65,7 +65,7 @@ strong, b {
   -premailer-cellspacing: 0;
   -premailer-width: 100%;
   background-color: #fff;
-  margin: 0 auto;
+  margin: 0;
   max-width: 600px;
   padding: 0;
   width: 100%;
@@ -85,7 +85,7 @@ strong, b {
 .header {
   background-color: #ffffff;
   color: #374974;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   text-align: left;
 }
 
@@ -130,7 +130,7 @@ table.header__content {
   -premailer-cellspacing: 0;
   -premailer-width: 570px;
   background-color: #ffffff;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   width: 100%;
 }

@@ -4,7 +4,7 @@
 <tr>
 <td class="content-cell" align="left">
 <div class="text-small pb-base">
-  Komitee Pro Flughafen<br>
+  <strong>Komitee Pro Flughafen</strong><br>
   Weinbergstrasse 25<br>
   8001 Zürich
 </div>
