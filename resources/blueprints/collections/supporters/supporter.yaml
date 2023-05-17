@@ -23,6 +23,19 @@ sections:
           validate:
             - required
       -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          display: E-Mail
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
         handle: website
         field:
           input_type: text

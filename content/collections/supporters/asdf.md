@@ -1,9 +1,10 @@
 ---
-id: 51eeac67-33c8-4f2b-8d8d-2a4bd0e1c1e8
+id: 23ae6bf0-06b4-445f-b437-61b86041bc5e
 published: false
 blueprint: supporter
 title: asdf
 website: 'https://asdf'
-image: supporters/asdf-qOt1gUh9HsL2edEk.jpg
+image: supporters/asdf-1SakeUR4lL9XFrqK.jpg
 organisation: asdf
+email: asdfa@daf.ch
 ---

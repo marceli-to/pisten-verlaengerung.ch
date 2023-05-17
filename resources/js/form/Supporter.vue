@@ -35,7 +35,7 @@
             v-model="form.email" 
             placeholder="E-Mail der Organisation*"
             :error="errors.email"
-            @blur="validateEmail('email')"
+            @blur="validateEmail()"
             @focus="removeError('email')">
           </form-input>
         </form-group>
@@ -149,17 +149,20 @@ export default {
     },
 
     validateEmail() {
+      if (this.validEmail()) {
+        this.errors.email = false;
+        return;
+      }
+      this.errors.email = true;
+    },
+
+    validEmail() {
       if (this.form.email === null || this.form.email === '') {
-        this.errors.email = true;
         return false;
       }
       const rgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!rgx.test(this.form.email)) {
-        this.errors.email = true;
         return false;
-      }
-      else {
-        this.errors.email = false;
       }
       return true;
     },
@@ -201,7 +204,7 @@ export default {
       if (
         this.form.organisation &&
         this.form.website &&
-        this.validateEmail() &&
+        this.validEmail() &&
         this.form.image
         ) {
         return true;

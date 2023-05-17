@@ -35,7 +35,7 @@
           v-model="form.email" 
           placeholder="E-Mail*"
           :error="errors.email"
-          @blur="validateField('email')"
+          @blur="validateEmail()"
           @focus="removeError('email')">
         </form-input>
       </form-group>
@@ -226,20 +226,23 @@ methods: {
   },
 
   validateEmail() {
-      if (this.form.email === null || this.form.email === '') {
-        this.errors.email = true;
-        return false;
-      }
-      const rgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!rgx.test(this.form.email)) {
-        this.errors.email = true;
-        return false;
-      }
-      else {
-        this.errors.email = false;
-      }
-      return true;
-    },
+    if (this.validEmail()) {
+      this.errors.email = false;
+      return;
+    }
+    this.errors.email = true;
+  },
+
+  validEmail() {
+    if (this.form.email === null || this.form.email === '') {
+      return false;
+    }
+    const rgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!rgx.test(this.form.email)) {
+      return false;
+    }
+    return true;
+  },
 
   handleValidationErrors(data) {
     let errors = [];
@@ -282,12 +285,11 @@ methods: {
 computed: {
 
   isValid() { 
-    return true;
     if (
       this.form.name &&
       this.form.firstname &&
       this.form.location &&
-      this.validateEmail() &&
+      this.validEmail() &&
       this.form.quote &&
       this.form.image &&
       (

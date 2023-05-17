@@ -11,6 +11,10 @@
   {{ $data->name }}
 </div>
 <div class="text-base pb-base">
+  <strong>E-Mail</strong><br>
+  {{ $data->email }}
+</div>
+<div class="text-base pb-base">
   <strong>Partei</strong><br>
   {{ $data->party }}
 </div>

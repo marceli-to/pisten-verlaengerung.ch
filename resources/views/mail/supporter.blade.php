@@ -7,6 +7,10 @@
   {{ $data->organisation }}
 </div>
 <div class="text-base pb-base">
+  <strong>E-Mail</strong><br>
+  {{ $data->email }}
+</div>
+<div class="text-base pb-base">
   <strong>Website</strong><br>
   {{ $data->website }}
 </div>
