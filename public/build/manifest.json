@@ -6,14 +6,14 @@
     "file": "assets/vue-axios.esm.min-94a82fc0.js"
   },
   "resources/js/app.css": {
-    "file": "assets/app-13143712.css",
+    "file": "assets/app-354b924c.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-13143712.css"
+      "assets/app-354b924c.css"
     ],
-    "file": "assets/app-2d8d8ad3.js",
+    "file": "assets/app-0ecb3d16.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
