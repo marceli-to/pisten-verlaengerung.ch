@@ -93,10 +93,11 @@
           placeholder="Bemerkungen">
         </form-textarea>
       </form-group>
-
-      <form-group class="mt-80 flex justify-center w-full">
+      
+      <form-group class="mt-40 md:mt-60 xl:mt-80 !mb-0 xl:!mb-30 flex justify-center w-full">
         <button 
-          :class="[isValid ? 'bg-midnight text-white' : 'bg-cloud-mist pointer-events-none select-none', 'font-bold text-white py-10 px-25 leading-none inline-flex items-center w-auto text-left']"
+          :class="[isValid && !isLoading ? 'bg-midnight text-white hover:bg-cloud-mist hover:text-midnight transition-colors' : 'bg-cloud-mist pointer-events-none select-none', 'font-bold text-white py-10 px-25 leading-none inline-flex items-center w-auto text-left']"
+          type="button"
           @click.prevent="submit()">
           Absenden
         </button>

@@ -26,7 +26,7 @@
     "src": "resources/js/form/supporter.js"
   },
   "resources/js/form/testimonial.js": {
-    "file": "assets/testimonial-ac360a41.js",
+    "file": "assets/testimonial-5a5ac1ae.js",
     "imports": [
       "_vue-axios.esm.min-94a82fc0.js"
     ],
