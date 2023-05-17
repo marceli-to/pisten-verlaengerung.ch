@@ -27,6 +27,7 @@ class SupporterStoreRequest extends FormRequest
       'organisation' => 'required',
       'website' => 'required',
       'image' => 'image|mimes:jpeg,png,jpg,eps,tiff,svg|max:16384',
+      'email' => 'required|email',
     ];
   }
 
@@ -41,9 +42,11 @@ class SupporterStoreRequest extends FormRequest
     return [
       'organisation.required' => 'Organisation fehlt',
       'website.required' => 'Webseite fehlt',
-      'image.image' => 'Bild fehlt',
-      'image.mimes' => 'Bildtyp ungültig (erlaubt sind JPG, PNG, GIF, EPS, TIFF, SVG)',
-      'image.max' => 'Bild zu gross (max. 16MB)',
+      'email.required' => 'E-Mail fehlt',
+      'email.email' => 'E-Mail ungültig',
+      'image.image' => 'Logo fehlt',
+      'image.mimes' => 'Logoformat ungültig (erlaubt sind JPG, PNG, GIF, EPS, TIFF, SVG)',
+      'image.max' => 'Logo zu gross (max. 16MB)',
     ];
   }
 }

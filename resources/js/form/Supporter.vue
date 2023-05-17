@@ -29,8 +29,18 @@
           </form-input>
         </form-group>
 
+        <form-group :error="errors.email">
+          <form-input 
+            type="text" 
+            v-model="form.email" 
+            placeholder="E-Mail der Organisation*"
+            :error="errors.email"
+            @blur="validateEmail('email')"
+            @focus="removeError('email')">
+          </form-input>
+        </form-group>
 
-        <form-group class="bg-cloud-mist text-xxs md:text-xs xl:text-sm px-10 py-20" :error="errors.image">
+        <form-group :class="[errors.image ? 'bg-rosewater' : 'bg-cloud-mist', 'text-xxs md:text-xs xl:text-sm px-10 py-20']" :error="errors.image">
           <div class="text-xxs md:text-xs xl:text-sm mb-20">Logo*</div>
           <input type="file" @change="fileChange" maxlength="1" ref="file" accept="image/png, image/jpeg" />
           <div class="mt-20">Sofern möglich als EPS, erlaubt sind JPG, PNG, EPS, TIFF, max. 8MB</div>
@@ -76,12 +86,14 @@ export default {
       form: {
         organisation: null,
         website: null,
+        email: null,
         image: null,
       },
 
       errors: {
         organisation: null,
         website: null,
+        email: null,
         image: null,
       },
 
@@ -104,6 +116,7 @@ export default {
       formData.append('image', this.form.image);
       formData.append('organisation', this.form.organisation ? this.form.organisation : '');
       formData.append('website', this.form.website ? this.form.website : '');
+      formData.append('email', this.form.email ? this.form.email : '');
 
       this.isSent = false;
       this.isLoading = true;
@@ -117,6 +130,7 @@ export default {
       })
       .catch(error => {
         NProgress.done();
+        this.isLoading = false;
         this.handleValidationErrors(error.response.data);
       });
     },
@@ -132,6 +146,22 @@ export default {
       else {
         this.errors[field] = false;
       }
+    },
+
+    validateEmail() {
+      if (this.form.email === null || this.form.email === '') {
+        this.errors.email = true;
+        return false;
+      }
+      const rgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!rgx.test(this.form.email)) {
+        this.errors.email = true;
+        return false;
+      }
+      else {
+        this.errors.email = false;
+      }
+      return true;
     },
 
     handleValidationErrors(data) {
@@ -154,6 +184,7 @@ export default {
       this.form = {
         organisation: null,
         website: null,
+        email: null,
         image: null,
       };
       this.errors = {};
@@ -170,6 +201,7 @@ export default {
       if (
         this.form.organisation &&
         this.form.website &&
+        this.validateEmail() &&
         this.form.image
         ) {
         return true;

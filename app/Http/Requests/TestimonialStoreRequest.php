@@ -26,6 +26,7 @@ class TestimonialStoreRequest extends FormRequest
     return [
       'firstname' => 'required',
       'name' => 'required',
+      'email' => 'required|email',
       'location' => 'required',
       'quote' => 'required',
       'image' => 'image|mimes:jpeg,png,jpg|max:16384',
@@ -43,6 +44,8 @@ class TestimonialStoreRequest extends FormRequest
     return [
       'firstname.required' => 'Vorname fehlt',
       'name.required' => 'Name fehlt',
+      'email.required' => 'E-Mail fehlt',
+      'email.email' => 'E-Mail ungültig',
       'location.required' => 'Wohnort fehlt',
       'quote.required' => 'Zitat fehlt',
       'image.image' => 'Bild fehlt',

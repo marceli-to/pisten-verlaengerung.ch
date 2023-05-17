@@ -7,6 +7,17 @@
     <validation-errors :validationErrors="validationErrors"  v-if="validationErrors.length > 0" />
     <form class="mt-20 xl:mt-40" enctype="multipart/form-data">
 
+      <form-group :error="errors.firstname">
+        <form-input 
+          type="text" 
+          v-model="form.firstname" 
+          placeholder="Vorname*"
+          :error="errors.firstname"
+          @blur="validateField('firstname')"
+          @focus="removeError('firstname')">
+        </form-input>
+      </form-group>
+
       <form-group :error="errors.name">
         <form-input 
           type="text" 
@@ -18,14 +29,14 @@
         </form-input>
       </form-group>
 
-      <form-group :error="errors.firstname">
+      <form-group :error="errors.email">
         <form-input 
           type="text" 
-          v-model="form.firstname" 
-          placeholder="Vorname*"
-          :error="errors.firstname"
-          @blur="validateField('firstname')"
-          @focus="removeError('firstname')">
+          v-model="form.email" 
+          placeholder="E-Mail*"
+          :error="errors.email"
+          @blur="validateField('email')"
+          @focus="removeError('email')">
         </form-input>
       </form-group>
 
@@ -58,7 +69,7 @@
         </form-textarea>
       </form-group>
 
-      <form-group class="bg-cloud-mist text-xxs md:text-xs xl:text-sm px-10 py-20" :error="errors.image">
+      <form-group :class="[errors.image ? 'bg-rosewater' : 'bg-cloud-mist', 'text-xxs md:text-xs xl:text-sm px-10 py-20']" :error="errors.image">
         <div class="text-xxs md:text-xs xl:text-sm mb-20">Profilbild*</div>
         <input type="file" @change="fileChange" maxlength="1" ref="file" accept="image/png, image/jpeg" />
         <div class="mt-20">Bitte laden Sie ein hochauflösendes Bild hoch, erlaubt sind JPG, PNG, max. 8MB</div>
@@ -136,6 +147,7 @@ data() {
       firstname: null,
       party: null,
       location: null,
+      email: null,
       quote: null,
       image: null,
       copyright: null,
@@ -148,6 +160,7 @@ data() {
       name: null,
       firstname: null,
       location: null,
+      email: null,
       quote: null,
       image: null,
       confirm_ad_usage: null,
@@ -161,6 +174,7 @@ data() {
     },
 
     isSent: false,
+    isLoading: false,
   }
 },
 
@@ -172,6 +186,7 @@ methods: {
     formData.append('image', this.form.image);
     formData.append('name', this.form.name ? this.form.name : '');
     formData.append('firstname', this.form.firstname ? this.form.firstname : '');
+    formData.append('email', this.form.email ? this.form.email : '');
     formData.append('location', this.form.location ? this.form.location : '');
     formData.append('party', this.form.party);
     formData.append('quote', this.form.quote ? this.form.quote : '');
@@ -181,15 +196,18 @@ methods: {
     formData.append('confirm_web_usage', this.form.confirm_web_usage);
 
     this.isSent = false;
+    this.isLoading = true;
     this.validationErrors = [];
     NProgress.start();
     this.axios.post(this.routes.store, formData).then(response => {
       NProgress.done();
       this.reset();
       this.isSent = true;
+      this.isLoading = false;
     })
     .catch(error => {
       NProgress.done();
+      this.isLoading = false;
       this.handleValidationErrors(error.response.data);
     });
   },
@@ -206,6 +224,22 @@ methods: {
       this.errors[field] = false;
     }
   },
+
+  validateEmail() {
+      if (this.form.email === null || this.form.email === '') {
+        this.errors.email = true;
+        return false;
+      }
+      const rgx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!rgx.test(this.form.email)) {
+        this.errors.email = true;
+        return false;
+      }
+      else {
+        this.errors.email = false;
+      }
+      return true;
+    },
 
   handleValidationErrors(data) {
     let errors = [];
@@ -227,6 +261,7 @@ methods: {
     this.form = {
       name: null,
       firstname: null,
+      email: null,
       party: null,
       location: null,
       quote: null,
@@ -247,10 +282,12 @@ methods: {
 computed: {
 
   isValid() { 
+    return true;
     if (
       this.form.name &&
       this.form.firstname &&
       this.form.location &&
+      this.validateEmail() &&
       this.form.quote &&
       this.form.image &&
       (
