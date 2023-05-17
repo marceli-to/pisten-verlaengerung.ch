@@ -25,5 +25,5 @@ strong {
 }
 
 p {
-  @apply mb-16 md:mb-20 xl:mb-24
+  @apply mb-20 md:mb-24 xl:mb-32
 }
