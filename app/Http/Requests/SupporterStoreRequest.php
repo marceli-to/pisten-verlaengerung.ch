@@ -26,7 +26,7 @@ class SupporterStoreRequest extends FormRequest
     return [
       'organisation' => 'required',
       'website' => 'required',
-      'image' => 'image|mimes:jpeg,png,jpg,eps,tiff,svg|max:16384',
+      'image' => 'mimes:jpeg,png,jpg,eps,tiff,svg|max:16384',
       'email' => 'required|email',
     ];
   }
@@ -44,7 +44,6 @@ class SupporterStoreRequest extends FormRequest
       'website.required' => 'Webseite fehlt',
       'email.required' => 'E-Mail fehlt',
       'email.email' => 'E-Mail ungültig',
-      'image.image' => 'Logo fehlt',
       'image.mimes' => 'Logoformat ungültig (erlaubt sind JPG, PNG, GIF, EPS, TIFF, SVG)',
       'image.max' => 'Logo zu gross (max. 16MB)',
     ];
