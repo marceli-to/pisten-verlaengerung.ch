@@ -5,7 +5,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class Testimonial extends Notification
+class SupporterOwnerEmail extends Notification
 {
   use Queueable;
 
@@ -40,8 +40,8 @@ class Testimonial extends Notification
   {
     return (new MailMessage)
       ->from('no-reply@pisten-verlaengerung.ch')
-      ->subject('Pistenverlängerung – neues Testimonial')
-      ->markdown('mail.testimonial', ['data' => $this->data]);
+      ->subject('Pistenverlängerung – Unterstützer')
+      ->markdown('mail.supporter.owner', ['data' => $this->data]);
   }
 
   /**

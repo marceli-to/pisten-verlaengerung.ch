@@ -6,8 +6,10 @@ use Statamic\Fields\Value;
 use App\Http\Requests\TestimonialStoreRequest;
 use App\Http\Requests\SupporterStoreRequest;
 use Illuminate\Support\Facades\Notification;
-use App\Notifications\Supporter as SupporterNotification;
-use App\Notifications\Testimonial as TestimonialNotification;
+use App\Notifications\SupporterUserEmail;
+use App\Notifications\SupporterOwnerEmail;
+use App\Notifications\TestimonialUserEmail;
+use App\Notifications\TestimonialOwnerEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -44,7 +46,8 @@ class FormController extends Controller
 
     $testimonial->published(false);
     $testimonial->save();
-    Notification::route('mail', env('MAIL_TO'))->notify(new TestimonialNotification($testimonial));
+    Notification::route('mail', $request->input('email'))->notify(new TestimonialUserEmail($testimonial));
+    Notification::route('mail', env('MAIL_TO'))->notify(new TestimonialOwnerEmail($testimonial));
     return response()->json($testimonial->id, 201);
   }
 
@@ -87,7 +90,8 @@ class FormController extends Controller
 
     $supporter->published(false);
     $supporter->save();
-    Notification::route('mail', env('MAIL_TO'))->notify(new SupporterNotification($supporter));
+    Notification::route('mail', $request->input('email'))->notify(new SupporterUserEmail($supporter));
+    Notification::route('mail', env('MAIL_TO'))->notify(new SupporterOwnerEmail($supporter));
     return response()->json($supporter->id, 201);
   }
 
