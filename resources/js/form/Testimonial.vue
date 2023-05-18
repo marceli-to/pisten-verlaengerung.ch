@@ -190,8 +190,8 @@ methods: {
     formData.append('location', this.form.location ? this.form.location : '');
     formData.append('party', this.form.party);
     formData.append('quote', this.form.quote ? this.form.quote : '');
-    formData.append('copyright', this.form.copyright);
-    formData.append('remarks', this.form.remarks);
+    formData.append('copyright', this.form.copyright ? this.form.copyright : '');
+    formData.append('remarks', this.form.remarks ? this.form.remarks : '');
     formData.append('confirm_ad_usage', this.form.confirm_ad_usage);
     formData.append('confirm_web_usage', this.form.confirm_web_usage);
 
