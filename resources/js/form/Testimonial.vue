@@ -188,7 +188,7 @@ methods: {
     formData.append('firstname', this.form.firstname ? this.form.firstname : '');
     formData.append('email', this.form.email ? this.form.email : '');
     formData.append('location', this.form.location ? this.form.location : '');
-    formData.append('party', this.form.party);
+    formData.append('party', this.form.party ? this.form.party : '');
     formData.append('quote', this.form.quote ? this.form.quote : '');
     formData.append('copyright', this.form.copyright ? this.form.copyright : '');
     formData.append('remarks', this.form.remarks ? this.form.remarks : '');
