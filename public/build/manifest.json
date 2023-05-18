@@ -18,7 +18,7 @@
     "src": "resources/js/app.js"
   },
   "resources/js/form/supporter.js": {
-    "file": "assets/supporter-b85407b9.js",
+    "file": "assets/supporter-f80b70df.js",
     "imports": [
       "_vue-axios.esm.min-94a82fc0.js"
     ],
