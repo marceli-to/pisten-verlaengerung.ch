@@ -22,4 +22,8 @@
   <strong>Wohnort</strong><br>
   {{ $data->location }}
 </div>
+<div class="text-base pb-base">
+  <strong>Zitat</strong><br>
+  «{!! nl2br($data->quote) !!}»
+</div>
 </x-mail::message>
