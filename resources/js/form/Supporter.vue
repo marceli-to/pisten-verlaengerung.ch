@@ -43,7 +43,7 @@
         <form-group :class="[errors.image ? 'bg-rosewater' : 'bg-cloud-mist', 'text-xxs md:text-xs xl:text-sm px-10 py-20']" :error="errors.image">
           <div class="text-xxs md:text-xs xl:text-sm mb-20">Logo*</div>
           <input type="file" @change="fileChange" maxlength="1" ref="file" />
-          <div class="mt-20">Sofern möglich als EPS, erlaubt sind JPG, PNG, EPS, TIFF, max. 8MB</div>
+          <div class="mt-20">Sofern möglich als EPS, erlaubt sind JPG, PNG, EPS, TIFF, SVG, max. 8MB</div>
         </form-group>
 
         <form-group class="mt-40 md:mt-60 xl:mt-80 !mb-0 xl:!mb-30 flex justify-center w-full">

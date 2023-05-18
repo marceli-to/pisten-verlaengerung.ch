@@ -44,7 +44,7 @@ class SupporterStoreRequest extends FormRequest
       'website.required' => 'Webseite fehlt',
       'email.required' => 'E-Mail fehlt',
       'email.email' => 'E-Mail ungültig',
-      'image.mimes' => 'Logoformat ungültig (erlaubt sind JPG, PNG, GIF, EPS, TIFF, SVG)',
+      'image.mimes' => 'Logoformat ungültig (erlaubt sind JPG, PNG, EPS, TIFF, SVG)',
       'image.max' => 'Logo zu gross (max. 16MB)',
     ];
   }
