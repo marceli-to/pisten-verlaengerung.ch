@@ -2,6 +2,8 @@
 /public/hot
 /public/storage
 /public/vendor/statamic
+/public/assets/testimonials
+/public/assets/supporters
 /storage/*.key
 /vendor
 .env
