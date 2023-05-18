@@ -40,7 +40,7 @@ class SupporterOwnerEmail extends Notification
   {
     return (new MailMessage)
       ->from('no-reply@pisten-verlaengerung.ch')
-      ->subject('Pistenverlängerung – Unterstützer')
+      ->subject('Unterstützung «JA zur Pistenverlängerung am Flughafen Zürich»')
       ->markdown('mail.supporter.owner', ['data' => $this->data]);
   }
 
