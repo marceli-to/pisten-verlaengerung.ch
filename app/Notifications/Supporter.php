@@ -39,7 +39,7 @@ class Supporter extends Notification
   public function toMail($notifiable)
   {
     return (new MailMessage)
-      ->from('no-reply@pistenverlaengerung.ch')
+      ->from('no-reply@pisten-verlaengerung.ch')
       ->subject('Pistenverlängerung – Unterstützer')
       ->markdown('mail.supporter', ['data' => $this->data]);
   }

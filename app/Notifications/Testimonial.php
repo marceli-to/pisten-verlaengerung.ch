@@ -39,7 +39,7 @@ class Testimonial extends Notification
   public function toMail($notifiable)
   {
     return (new MailMessage)
-      ->from('no-reply@pistenverlaengerung.ch')
+      ->from('no-reply@pisten-verlaengerung.ch')
       ->subject('Pistenverlängerung – neues Testimonial')
       ->markdown('mail.testimonial', ['data' => $this->data]);
   }
