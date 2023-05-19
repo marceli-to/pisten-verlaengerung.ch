@@ -39,7 +39,7 @@ class SupporterUserEmail extends Notification
   public function toMail($notifiable)
   {
     return (new MailMessage)
-      ->from('no-reply@pisten-verlaengerung.ch')
+      ->from('info@pisten-verlaengerung.ch')
       ->subject('Ihre Unterstützung «JA zur Pistenverlängerung am Flughafen Zürich»')
       ->markdown('mail.supporter.user', ['data' => $this->data]);
   }

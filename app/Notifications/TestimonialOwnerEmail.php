@@ -39,7 +39,7 @@ class TestimonialOwnerEmail extends Notification
   public function toMail($notifiable)
   {
     return (new MailMessage)
-      ->from('no-reply@pisten-verlaengerung.ch')
+      ->from('info@pisten-verlaengerung.ch')
       ->subject('Testimonial «JA zur Pistenverlängerung am Flughafen Zürich»')
       ->markdown('mail.testimonial.owner', ['data' => $this->data]);
   }
