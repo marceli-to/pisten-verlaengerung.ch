@@ -6,7 +6,7 @@
 <div class="text-base pb-base">
 <strong>Komitee Pro Flughafen</strong><br>
 <a href="https://pisten-verlaengerung.ch" target="_blank">pisten-verlaengerung.ch</a><br>
-<a href="mailto:kontakt@pisten-verlaengerung.ch" target="_blank">kontakt@pisten-verlaengerung.ch</a>
+<a href="mailto:info@pisten-verlaengerung.ch" target="_blank">info@pisten-verlaengerung.ch</a>
 </div>
 </td>
 </tr>
