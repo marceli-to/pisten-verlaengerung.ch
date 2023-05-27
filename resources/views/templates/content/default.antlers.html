@@ -1,3 +1,6 @@
-<article class="leading-7 md:leading-snug">
+<article class="content leading-7 md:leading-snug">
   {{ content }}
+  {{ if shareable }}
+    {{ partial:components/share }}
+  {{ /if }}
 </article>

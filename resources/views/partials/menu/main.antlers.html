@@ -1,10 +1,6 @@
-{{# <a href="javascript:;" class="btn-menu" data-menu-btn>
-  {{ partial:icons/burger }}
-  {{ partial:icons/cross }}
-</a> #}}
-<nav class="site-menu" data-menu>
-  <ul>
-    {{ nav:collection:pages sort="order" }}
+<nav class="container sticky top-8 bg-white" data-menu>
+  <ul class="flex justify-between border-b-16 border-cloud-mist pb-8">
+    {{ nav:collection:pages sort="order" is_menu:is="1" }}
       {{ partial:menu/item :text="title" :url="url" target="_self" }}
     {{ /nav:collection:pages }}
   </ul>

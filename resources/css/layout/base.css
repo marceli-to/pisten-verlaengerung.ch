@@ -20,10 +20,19 @@ main {
   @apply max-w-[1200px] px-20 md:px-40 mx-auto;
 }
 
+.content a {
+  @apply hover:underline hover:underline-offset-8 hover:decoration-1;
+}
+
 strong {
   @apply font-bold;
 }
 
 p {
-  @apply mb-20 md:mb-24 xl:mb-32
+  @apply mb-20 md:mb-24 xl:mb-42
+}
+
+p:last-child,
+p:last-of-type {
+  @apply !mb-0;
 }

@@ -2,7 +2,8 @@
   <a 
     href="{{ url }}" 
     target="{{ target }}" 
-    class="{{ if is_current || is_parent }} {{ /if }}">
+    class="font-bold text-misty-blue hover:text-midnight transition-colors text-xl lg:text-2xl xl:text-3xl {{ if is_current || is_parent }} text-midnight {{ /if }}"
+    title="{{ text }}">
     {{ text }}
   </a>
 </li>

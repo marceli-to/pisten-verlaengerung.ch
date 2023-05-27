@@ -11,6 +11,13 @@ module.exports = {
   theme: {
 
     extend: {
+
+      borderWidth: {
+        '16': '16px',
+        '18': '18px',
+        '20': '20px',
+      },
+
       
       colors: {
         'midnight': '#374974',
