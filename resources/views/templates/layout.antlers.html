@@ -25,6 +25,9 @@
 {{ vite src="resources/js/app.js" }}
 </head>
 <body class="font-light leading-7 md:leading-tight text-midnight text-xl md:text-2xl xl:text-3xl">
+  <div class="hidden md:block fixed top-10 right-10">
+    {{ partial:components/social-media :hoverTextColor="'text-misty-blue'" }}
+  </div>
   {{ partial:layout/header }}
   {{ template_content }}
   {{ partial:layout/footer }}
