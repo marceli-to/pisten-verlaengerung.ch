@@ -1,0 +1,15 @@
+::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  @apply outline-none
+}
+
+details[open] .plus {
+  @apply hidden
+}
+
+details[open] .minus {
+  @apply block
+}

@@ -24,9 +24,9 @@
 <meta name="theme-color" content="#ffffff">
 {{ vite src="resources/js/app.js" }}
 </head>
-<body class="font-light leading-tight">
+<body class="font-light leading-tight text-midnight text-xl md:text-2xl xl:text-3xl">
   {{ partial:layout/header }}
-  {{ partial:layout/main }}
+  {{ template_content }}
   {{ partial:layout/footer }}
 </body>
 </html>

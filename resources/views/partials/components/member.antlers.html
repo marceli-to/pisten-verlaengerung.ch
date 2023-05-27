@@ -1,0 +1,23 @@
+<div class="md:grid md:grid-cols-4 items-center {{ if !last }} mb-45 md:mb-45 xl:mb-70 {{ /if }}">
+  <figure class="md:col-span-1 mb-30 md:mb-0 max-w-[275px] mx-auto">
+    <img 
+      src="{{ glide :src="image:url" :width="'640'" :height="'640'" }}" 
+      class="block w-full rounded-full" 
+      width="1000" 
+      height="1000" 
+      alt="{{ alt }}"
+      {{ if !first }}
+        loading="lazy"
+      {{ /if }}
+      >
+  </figure>
+  <div class="md:col-span-3 text-white md:ml-25 xl:ml-65">
+    {{ if description }}
+      {{ description}}
+    {{ /if }}
+    <div class="font-bold mt-20 xl:mt-30">
+      {{ firstname }} {{ name }}<br>
+      {{ profession }}
+    </div>
+  </div>
+</div>

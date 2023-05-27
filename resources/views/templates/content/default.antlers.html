@@ -1,6 +1,25 @@
-<article class="content leading-7 md:leading-snug">
-  {{ content }}
-  {{ if shareable }}
-    {{ partial:components/share }}
-  {{ /if }}
-</article>
+<main class="container py-45 lg:py-60 xl:py-90">
+  {{ partial:layout/article }}
+  
+    {{ content }}
+
+      {{ if type == 'text' }}
+        {{ text }}
+      {{ /if }}
+
+      {{ if type == 'video'}}
+        {{ partial:components/video }}
+      {{ /if }}
+
+      {{ if type == 'collapsible' }}
+        {{ partial:components/collapsible }}
+      {{ /if }}
+
+    {{ /content }}
+
+    {{ if shareable }}
+      {{ partial:components/share }}
+    {{ /if }}
+
+  {{ /partial:layout/article }}
+</main>

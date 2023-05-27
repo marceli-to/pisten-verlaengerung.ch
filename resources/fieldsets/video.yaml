@@ -1,0 +1,13 @@
+title: Video
+fields:
+  -
+    handle: code
+    field:
+      antlers: false
+      type: textarea
+      display: Code
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

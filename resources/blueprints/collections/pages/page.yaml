@@ -51,6 +51,27 @@ tabs:
               listable: hidden
               instructions_position: above
               visibility: visible
+              sets:
+                content_blocks:
+                  display: 'Content blocks'
+                  instructions: null
+                  icon: null
+                  sets:
+                    video:
+                      display: Video
+                      instructions: null
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          import: video
+                    collapsible:
+                      display: Collapsible
+                      instructions: null
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: collapsible
+              hide_display: false
       -
         display: 'SEO, Social Media'
         fields:

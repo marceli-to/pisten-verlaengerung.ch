@@ -1,0 +1,18 @@
+<main class="pt-45 lg:pt-60 xl:pt-90">
+  <section class="container">
+    {{ partial:layout/article }}
+      {{ content }}
+        {{ if type == 'text' }}
+          {{ text }}
+        {{ /if }}
+      {{ /content }}
+    {{ /partial:layout/article }}
+  </section>
+  <div class="bg-midnight mt-25 lg:mt-45 xl:mt-60 pt-25 lg:pt-45 xl:pt-60 pb-45 lg:pb-60 xl:pb-90">
+    <section class="container">
+      {{ collection:committee sort="order" }}
+        {{ partial:components/member }}
+      {{ /collection:committee }}
+    </section>
+  </div>
+</main>

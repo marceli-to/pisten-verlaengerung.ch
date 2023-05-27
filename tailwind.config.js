@@ -44,6 +44,10 @@ module.exports = {
         'xl': '1.375rem',    // 22px
         '2xl': '1.625rem',   // 26px
         '3xl': '2rem',       // 32px
+
+        '4xl': '2.063rem',     // 33px
+        '5xl': '2.75rem',      // 44px
+        '6xl': '3.438rem',    // 55px
       },
     },
 

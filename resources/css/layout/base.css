@@ -24,6 +24,15 @@ main {
   @apply hover:underline hover:underline-offset-8 hover:decoration-1;
 }
 
+.content h2 {
+  @apply text-4xl md:text-5xl xl:text-6xl font-bold leading-[1.1] mb-24 xl:mb-42;
+}
+
+.content h3 {
+  @apply font-bold mb-0;
+}
+
+
 strong {
   @apply font-bold;
 }

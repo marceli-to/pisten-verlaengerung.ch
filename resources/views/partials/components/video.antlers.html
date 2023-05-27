@@ -1,0 +1,9 @@
+{{ if code }}
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/{{ code }}" frameborder="0" allowfullscreen></iframe>
+  </div>
+{{ else }}  
+  <figure class="mx-auto max-w-lg my-50 xl:my-60">
+    <img src="/img/placeholder-video.png" width="665" height="374" />
+  </figure>
+{{ /if }}
