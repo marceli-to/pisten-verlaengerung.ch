@@ -46,3 +46,7 @@ p:last-child,
 p:last-of-type {
   @apply !mb-0;
 }
+
+.text-image p {
+  @apply mb-10 md:mb-15 xl:mb-15
+}

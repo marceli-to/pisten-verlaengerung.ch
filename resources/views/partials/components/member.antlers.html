@@ -1,5 +1,5 @@
-<div class="md:grid md:grid-cols-4 items-center {{ if !last }} mb-45 md:mb-45 xl:mb-70 {{ /if }}">
-  <figure class="md:col-span-1 mb-30 md:mb-0 max-w-[275px] mx-auto">
+<div class="md:grid md:grid-cols-12 items-center {{ if !last }} mb-45 md:mb-45 xl:mb-70 {{ /if }}">
+  <figure class="md:col-span-4 xl:col-span-3 mb-30 md:mb-0 max-w-[275px] mx-auto">
     <img 
       src="{{ glide :src="image:url" :width="'640'" :height="'640'" }}" 
       class="block w-full rounded-full" 
@@ -11,7 +11,7 @@
       {{ /if }}
       >
   </figure>
-  <div class="md:col-span-3 text-white md:ml-25 xl:ml-65">
+  <div class="md:col-span-8 xl:col-span-9 text-white md:ml-25 xl:ml-65">
     {{ if description }}
       {{ description}}
     {{ /if }}

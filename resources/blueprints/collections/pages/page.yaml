@@ -71,6 +71,13 @@ tabs:
                       fields:
                         -
                           import: collapsible
+                    text_image:
+                      display: 'Text, Image'
+                      instructions: null
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          import: text_image
               hide_display: false
       -
         display: 'SEO, Social Media'

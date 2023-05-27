@@ -15,6 +15,10 @@
         {{ partial:components/collapsible }}
       {{ /if }}
 
+      {{ if type == 'text_image' }}
+        {{ partial:components/text_image }}
+      {{ /if }}
+
     {{ /content }}
 
     {{ if shareable }}
