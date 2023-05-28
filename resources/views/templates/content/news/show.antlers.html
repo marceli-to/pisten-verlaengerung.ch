@@ -1,0 +1,35 @@
+<main class="container py-45 lg:py-60 xl:py-90">
+  {{ partial:layout/article }}
+
+  <div class="mb-20 md:mb-24 xl:mb-42">
+    {{ date iso_format="Do MMMM YYYY" }}
+  </div>
+
+  <h2>{{ title }} </h2>
+
+  <div class="mb-20 md:mb-24 xl:mb-42 font-bold">{{ lead }}</div>
+  
+    {{ content }}
+
+      {{ if type == 'text' }}
+        {{ text }}
+      {{ /if }}
+
+      {{ if type == 'image' }}
+        {{ partial:components/image }}
+      {{ /if }}
+
+      {{ if type == 'text_image' }}
+        {{ partial:components/text_image :class="'mb-20 md:mb-24 xl:mb-42'" }}
+      {{ /if }}
+
+    {{ /content }}
+
+    <a href="/aktuelles" class="mt-20 md:mt-24 xl:mt-42 font-bold block text-center mx-auto w-auto">
+      Zurück zur Übersicht
+    </a>
+
+    {{ partial:components/share }}
+
+  {{ /partial:layout/article }}
+</main>

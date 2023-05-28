@@ -35,6 +35,36 @@ tabs:
               antlers: false
               hide_display: false
           -
+            handle: preview_image
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Preview image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: preview_text
+            field:
+              antlers: false
+              type: textarea
+              display: 'Preview text'
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
             handle: lead
             field:
               antlers: false
@@ -53,7 +83,7 @@ tabs:
               buttons:
                 - h3
                 - bold
-                - image
+                - anchor
               smart_typography: false
               save_html: false
               inline: false
@@ -75,6 +105,26 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
+              sets:
+                content_blocks:
+                  display: 'Content blocks'
+                  instructions: null
+                  icon: layout-display-split-quarters
+                  sets:
+                    image:
+                      display: Image
+                      instructions: null
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image
+                    text_image:
+                      display: 'Text, Image'
+                      instructions: null
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          import: text_image
   sidebar:
     display: Sidebar
     sections:
@@ -84,5 +134,14 @@ tabs:
             handle: slug
             field:
               type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - news
+              max_items: 1
+              listable: false
               localizable: true
 title: News

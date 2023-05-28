@@ -24,6 +24,7 @@ fields:
     handle: text
     field:
       buttons:
+        - h3
         - bold
         - unorderedlist
         - anchor
