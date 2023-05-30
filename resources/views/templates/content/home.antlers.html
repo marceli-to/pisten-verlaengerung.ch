@@ -30,25 +30,27 @@
   </div>
 
   {{# mobile #}}
-  {{ partial:components/arguments :class="'sm:hidden'" }}
+  {{ partial:components/cards/index :class="'sm:hidden'" }}
+
     {{ collection:arguments sort="order" }}
-      {{ partial:components/argument-tile }}
+      {{ partial:components/cards/tile }}
     {{ /collection:arguments }}
-  {{ /partial:components/arguments }}
+    
+  {{ /partial:components/cards/index }}
 
   {{# screens #}}
-  {{ partial:components/arguments :class="'hidden'" }}
-    <div class="swiper js-swiper">
-      <div class="swiper-wrapper">
+  {{ partial:components/cards/index :class="'hidden'" }}
+
+    {{ partial:components/swiper/index }}
       {{ collection:arguments sort="order" }}
-        {{ partial:components/argument-tile }}
+        {{ partial:components/cards/tile }}
       {{ /collection:arguments }}
-      </div>
-    </div>
+    {{ /partial:components/swiper/index }}
 
     {{ collection:arguments sort="order" }}
-      {{ partial:components/argument-overlay }}
+      {{ partial:components/cards/overlay }}
     {{ /collection:arguments }}
-  {{ /partial:components/arguments }}
+
+  {{ /partial:components/cards/index }}
 </main>
 

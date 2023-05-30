@@ -1,3 +1,7 @@
 .card-argument-overlay.is-active {
   @apply block opacity-100 z-10 transition-all;
 }
+
+.card-argument-inline.is-active {
+  @apply h-auto z-10 visible
+}

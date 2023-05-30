@@ -6,6 +6,7 @@ import 'swiper/css';
   const selectors = {
     tile: 'data-tile',
     overlay: 'data-overlay-item',
+    inline: 'data-inline-item',
   };
 
   const cssClasses = {
@@ -22,9 +23,13 @@ import 'swiper/css';
 
         // hide all overlays
         hideAllOverlays();
+        hideAllInlines();
 
         const overlayItem = document.querySelector(`[${selectors.overlay}="${tile.dataset.tile}"]`);
         overlayItem.classList.add(cssClasses.active);
+
+        const inlineItem = document.querySelector(`[${selectors.inline}="${tile.dataset.tile}"]`);
+        inlineItem.classList.add(cssClasses.active);
       });
     });
 
@@ -32,6 +37,7 @@ import 'swiper/css';
     document.addEventListener('click', function(event) {
       if (!event.target.closest(`[${selectors.tile}]`)) {
         hideAllOverlays();
+        hideAllInlines();
       }
     });
 
@@ -39,12 +45,19 @@ import 'swiper/css';
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         hideAllOverlays();
+        hideAllInlines();
       }
     });
   };
 
   const hideAllOverlays = () => {
     document.querySelectorAll(`[${selectors.overlay}]`).forEach(function(item) {
+      item.classList.remove(cssClasses.active);
+    });
+  };
+
+  const hideAllInlines = () => {
+    document.querySelectorAll(`[${selectors.inline}]`).forEach(function(item) {
       item.classList.remove(cssClasses.active);
     });
   };

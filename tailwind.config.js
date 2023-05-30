@@ -13,6 +13,7 @@ module.exports = {
     extend: {
 
       borderWidth: {
+        '12': '12px',
         '16': '16px',
         '18': '18px',
         '20': '20px',
