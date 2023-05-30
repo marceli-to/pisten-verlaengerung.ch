@@ -26,13 +26,12 @@ main {
 }
 
 .content h2:not(.news h2) {
-  @apply text-4xl md:text-5xl xl:text-6xl font-bold leading-[1.1] mb-24 xl:mb-42;
+  @apply text-4xl md:text-5xl xl:text-6xl font-bold mb-24 xl:mb-42;
 }
 
 .content h3 {
   @apply font-bold mb-0;
 }
-
 
 strong {
   @apply font-bold;
@@ -52,11 +51,11 @@ p:last-of-type {
 }
 
 .masonry-grid-item {
-  width: calc(33% - 12px);
+  width: calc(50% - 12px);
 }
 
 .masonry-grid-sizer {
-  width: calc(33% - 12px);
+  width: calc(50% - 12px);
 }
 
 .masonry-gutter-sizer {
@@ -64,21 +63,13 @@ p:last-of-type {
 }
 
 .card-argument {
-  @apply aspect-square col-span-1 flex items-center justify-center transition-all duration-300 ease-in-out cursor-pointer;
+  @apply aspect-square col-span-2  flex items-center justify-center cursor-pointer;
 }
 
-.card-argument.is-active {
-  @apply col-span-3;
+.card-argument-overlay {
+  @apply absolute left-[50%] -translate-x-1/2 min-w-[25%]  aspect-square p-15 opacity-0 -z-10;
 }
 
-.card-argument.is-active > div > div {
-  @apply block;
-}
-
-.card-argument > div > div {
-  @apply hidden;
-}
-
-.card-argument-inner {
-  @apply flex flex-col justify-center p-20;
+.card-argument-overlay.is-active {
+  @apply block opacity-100 z-50 transition-all;
 }
