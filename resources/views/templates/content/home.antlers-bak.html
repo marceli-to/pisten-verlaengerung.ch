@@ -30,7 +30,7 @@
   </div>
 
   {{# mobile #}}
-  {{ partial:components/arguments :class="'sm:hidden'" }}
+  {{ partial:components/arguments :class="'lg:hidden'" }}
     {{ collection:arguments sort="order" }}
       {{ partial:components/argument-tile }}
     {{ /collection:arguments }}
@@ -38,17 +38,11 @@
 
   {{# screens #}}
   {{ partial:components/arguments :class="'hidden'" }}
-    <div class="swiper js-swiper">
-      <div class="swiper-wrapper">
-      {{ collection:arguments sort="order" }}
-        {{ partial:components/argument-tile }}
-      {{ /collection:arguments }}
-      </div>
-    </div>
-
+    {{ collection:arguments sort="order" }}
+      {{ partial:components/argument-tile }}
+    {{ /collection:arguments }}
     {{ collection:arguments sort="order" }}
       {{ partial:components/argument-overlay }}
     {{ /collection:arguments }}
   {{ /partial:components/arguments }}
 </main>
-

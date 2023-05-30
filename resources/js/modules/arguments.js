@@ -1,3 +1,6 @@
+import Swiper from 'swiper';
+import 'swiper/css';
+
 (function () {
 
   const selectors = {
@@ -10,6 +13,8 @@
   };
 
   const init = () => {
+
+    initSwiper();
 
     // on click 'data-tile-*' show the corresponding 'data-overlay-*'
     document.querySelectorAll(`[${selectors.tile}]`).forEach(function(tile) {
@@ -41,6 +46,27 @@
   const hideAllOverlays = () => {
     document.querySelectorAll(`[${selectors.overlay}]`).forEach(function(item) {
       item.classList.remove(cssClasses.active);
+    });
+  };
+
+  const initSwiper = () => {
+    const swiper = new Swiper(".js-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      breakpoints: {
+        600: {
+          slidesPerView: 3,
+        },
+        860: {
+          slidesPerView: 4,
+        },
+        1100: {
+          slidesPerView: 5,
+        },
+        1400: {
+          slidesPerView: 6,
+        },
+      },
     });
   };
 

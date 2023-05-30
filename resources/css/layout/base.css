@@ -58,3 +58,7 @@ p:last-of-type {
 	-moz-hyphens: auto;
 	hyphens: auto;
 }
+
+.swiper {
+  width: 100%;
+}
