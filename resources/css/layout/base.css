@@ -51,7 +51,6 @@ p:last-of-type {
   @apply mb-10 md:mb-15 xl:mb-15
 }
 
-
 .masonry-grid-item {
   width: calc(50% - 12px);
 }
