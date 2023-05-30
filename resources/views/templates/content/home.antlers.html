@@ -1,0 +1,128 @@
+<main class="py-45 lg:py-60 xl:py-90">
+  <div class="container">
+    {{ partial:layout/article }}
+    
+      {{ content }}
+
+        {{ if type == 'text' }}
+          {{ text }}
+        {{ /if }}
+
+        {{ if type == 'video'}}
+          {{ partial:components/video }}
+        {{ /if }}
+
+        {{ if type == 'collapsible' }}
+          {{ partial:components/collapsible }}
+        {{ /if }}
+
+        {{ if type == 'text_image' }}
+          {{ partial:components/text_image }}
+        {{ /if }}
+
+      {{ /content }}
+
+      {{ if shareable }}
+        {{ partial:components/share }}
+      {{ /if }}
+
+    {{ /partial:layout/article }}
+  </div>
+
+  <div class="grid grid-cols-12 text-white items-center hidden">
+    <div class="aspect-square col-span-2 bg-red-400 flex items-center justify-center relative group">
+      Mehr<br>Sicherheit
+    </div>
+    <div class="aspect-square col-span-2 bg-yellow-400 flex items-center justify-center relative group">
+      Mehr<br>Pünktlichkeit
+    </div>
+    <div class="aspect-square col-span-2 bg-gray-400 flex items-center justify-center relative group">
+      Mehr<br>Nachtruhe
+    </div>
+    <div class="aspect-square col-span-2 bg-amber-700 flex items-center justify-center relative group">
+      Gleiche<br>Kapazität
+    </div>
+    <div class="aspect-square col-span-2 bg-fuchsia-700 flex items-center justify-center relative group">
+      Ohne<br>Steuergelder
+    </div>
+    <div class="aspect-square col-span-2 bg-green-700 flex items-center justify-center relative group">
+      <div>Weniger<br>CO<sub>2</sub></div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <div class="grid grid-cols-9 text-white items-center">
+    <div class="card-argument bg-red-400" data-card>
+      <div class="card-argument-inner">
+        <h2>Mehr<br>Sicherheit</h2>
+        <div>
+          <p>Längere Pisten bedeuten mehr Bremsweg, falls es zu einem Notfall beim Starten oder Landen kommt. Am Boden und in der Luft kommt es auch zu weniger Kreuzungen startender und landender Flugzeuge. Die Flugsicherheit wird erhöht.</p>
+          <p><a href="" class="font-bold">Mehr</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-argument bg-yellow-400" data-card>
+      <div class="card-argument-inner">
+        <h2>Mehr<br>Pünktlichkeit</h2>
+        <div>
+          <p>Längere Pisten bedeuten mehr Bremsweg, falls es zu einem Notfall beim Starten oder Landen kommt. Am Boden und in der Luft kommt es auch zu weniger Kreuzungen startender und landender Flugzeuge. Die Flugsicherheit wird erhöht.</p>
+          <p><a href="" class="font-bold">Mehr</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-argument bg-gray-400" data-card>
+      <div class="card-argument-inner">
+        <h2>Mehr<br>Nachtruhe</h2>
+        <div class="">
+          <p>Längere Pisten bedeuten mehr Bremsweg, falls es zu einem Notfall beim Starten oder Landen kommt. Am Boden und in der Luft kommt es auch zu weniger Kreuzungen startender und landender Flugzeuge. Die Flugsicherheit wird erhöht.</p>
+          <p><a href="" class="font-bold">Mehr</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-argument is-active bg-gray-400" data-card>
+      <div class="card-argument-inner">
+        <h2>Mehr<br>Nachtruhe</h2>
+        <div class="">
+          <p>Längere Pisten bedeuten mehr Bremsweg, falls es zu einem Notfall beim Starten oder Landen kommt. Am Boden und in der Luft kommt es auch zu weniger Kreuzungen startender und landender Flugzeuge. Die Flugsicherheit wird erhöht.</p>
+          <p><a href="" class="font-bold">Mehr</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-argument bg-amber-700" data-card>
+      <div class="card-argument-inner">
+        <h2>Gleiche<br>Kapazität</h2>
+        <div>
+          <p>Längere Pisten bedeuten mehr Bremsweg, falls es zu einem Notfall beim Starten oder Landen kommt. Am Boden und in der Luft kommt es auch zu weniger Kreuzungen startender und landender Flugzeuge. Die Flugsicherheit wird erhöht.</p>
+          <p><a href="" class="font-bold">Mehr</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-argument bg-fuchsia-700" data-card>
+      <div class="card-argument-inner">
+        <h2>Ohne<br>Steuergelder</h2>
+        <div>
+          <p>Längere Pisten bedeuten mehr Bremsweg, falls es zu einem Notfall beim Starten oder Landen kommt. Am Boden und in der Luft kommt es auch zu weniger Kreuzungen startender und landender Flugzeuge. Die Flugsicherheit wird erhöht.</p>
+          <p><a href="" class="font-bold">Mehr</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-argument bg-green-700" data-card>
+      <div class="card-argument-inner">
+        <h2>Weniger<br>CO<sub>2</sub></h2>
+        <div>
+          <p>Längere Pisten bedeuten mehr Bremsweg, falls es zu einem Notfall beim Starten oder Landen kommt. Am Boden und in der Luft kommt es auch zu weniger Kreuzungen startender und landender Flugzeuge. Die Flugsicherheit wird erhöht.</p>
+          <p><a href="" class="font-bold">Mehr</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</main>

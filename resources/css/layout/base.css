@@ -52,13 +52,33 @@ p:last-of-type {
 }
 
 .masonry-grid-item {
-  width: calc(50% - 12px);
+  width: calc(33% - 12px);
 }
 
 .masonry-grid-sizer {
-  width: calc(50% - 12px);
+  width: calc(33% - 12px);
 }
 
 .masonry-gutter-sizer {
   @apply w-24;
+}
+
+.card-argument {
+  @apply aspect-square col-span-1 flex items-center justify-center transition-all duration-300 ease-in-out cursor-pointer;
+}
+
+.card-argument.is-active {
+  @apply col-span-3;
+}
+
+.card-argument.is-active > div > div {
+  @apply block;
+}
+
+.card-argument > div > div {
+  @apply hidden;
+}
+
+.card-argument-inner {
+  @apply flex flex-col justify-center p-20;
 }
