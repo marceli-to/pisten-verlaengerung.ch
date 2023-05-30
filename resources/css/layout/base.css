@@ -62,12 +62,9 @@ p:last-of-type {
   @apply w-24;
 }
 
-.card-argument {
-  @apply aspect-square col-span-2  flex items-center justify-center cursor-pointer;
-}
+/* Cards */
+.card-tile {
 
-.card-argument-overlay {
-  @apply absolute left-[50%] -translate-x-1/2 min-w-[25%]  aspect-square p-15 opacity-0 -z-10;
 }
 
 .card-argument-overlay.is-active {

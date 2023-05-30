@@ -1,27 +1,23 @@
 <main class="container py-45 lg:py-60 xl:py-90">
-  {{ partial:layout/article }}
-
-    {{ content }}
-      {{ if type == 'text' }}
-        {{ text }}
-      {{ /if }}
-    {{ /content }}
-    
-    <div class="mt-20 md:mt-24 xl:mt-42 relative masonry-grid hidden sm:block">
-      <div class="masonry-grid-sizer"></div>
-      <div class="masonry-gutter-sizer"></div>
-      {{ collection:news sort="date:desc" }}
-        {{ partial:components/news_preview :isMasonry="'true'" }}
-      {{ /collection:news }}
-    </div>
-
-    <div class="mt-20 md:mt-24 xl:mt-42 relative block sm:hidden">
-      {{ collection:news sort="date:desc" }}
-        {{ partial:components/news_preview :isMasonry="'false'"}}
-      {{ /collection:news }}
-    </div>
-
-  {{ /partial:layout/article }}
+{{ partial:layout/article }}
+  {{ content }}
+    {{ if type == 'text' }}
+      {{ text }}
+    {{ /if }}
+  {{ /content }}
+  <div class="mt-20 md:mt-24 xl:mt-42 relative masonry-grid hidden sm:block">
+    <div class="masonry-grid-sizer"></div>
+    <div class="masonry-gutter-sizer"></div>
+    {{ collection:news sort="date:desc" }}
+      {{ partial:components/news_preview :isMasonry="'true'" }}
+    {{ /collection:news }}
+  </div>
+  <div class="mt-20 md:mt-24 xl:mt-42 relative block sm:hidden">
+    {{ collection:news sort="date:desc" }}
+      {{ partial:components/news_preview :isMasonry="'false'"}}
+    {{ /collection:news }}
+  </div>
+{{ /partial:layout/article }}
 </main>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>

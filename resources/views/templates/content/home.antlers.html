@@ -30,44 +30,16 @@
   </div>
 
   <div class="grid grid-cols-12 text-white items-center relative mt-150 mb-50">
-    <div class="card-argument bg-red-400" data-tile="security">
-      Mehr<br>Sicherheit
-    </div>
-    <div class="card-argument bg-yellow-400" data-tile="punctuality">
-      Mehr<br>Pünktlichkeit
-    </div>
-    <div class="card-argument bg-gray-400" data-tile="night-rest">
-      Mehr<br>Nachtruhe
-    </div>
-    <div class="card-argument bg-amber-700" data-tile="capacity">
-      Gleiche<br>Kapazität
-    </div>
-    <div class="card-argument bg-fuchsia-700" data-tile="taxes">
-      Ohne<br>Steuergelder
-    </div>
-    <div class="card-argument bg-green-700" data-tile="co2">
-      <div>Weniger<br>CO<sub>2</sub></div>
-    </div>
 
 
-    <div class="card-argument-overlay bg-red-400" data-overlay-item="security">
-      <h2>Mehr<br>Sicherheit</h2>
-    </div>
-    <div class="card-argument-overlay bg-yellow-400" data-overlay-item="punctuality">
-      <h2>Mehr<br>Pünktlichkeit</h2>
-    </div>
-    <div class="card-argument-overlay bg-gray-400" data-overlay-item="night-rest">
-      <h2>Mehr<br>Nachtruhe</h2>
-    </div>
-    <div class="card-argument-overlay bg-amber-700" data-overlay-item="capacity">
-      <h2>Mehr<br>Kapazität</h2>
-    </div>
-    <div class="card-argument-overlay bg-fuchsia-700" data-overlay-item="taxes">
-      <h2>Ohne<br>Steuergelder</h2>
-    </div>
-    <div class="card-argument-overlay bg-green-700" data-overlay-item="co2">
-      <h2>Weniger<br>CO<sub>2</sub></h2>
-    </div>
+    {{ collection:arguments sort="order" }}
+      {{ partial:components/argument-tile }}
+    {{ /collection:arguments }}
+    
+    {{ collection:arguments sort="order" }}
+      {{ partial:components/argument-overlay }}
+    {{ /collection:arguments }}
+
   </div>
 
 
@@ -91,6 +63,15 @@
   // on click outside of 'data-tile' hide all 'data-overlay-item'
   document.addEventListener('click', function(event) {
     if (!event.target.closest('[data-tile]')) {
+      document.querySelectorAll('[data-overlay-item]').forEach(function(item) {
+        item.classList.remove('is-active');
+      });
+    }
+  });
+
+  // on esc hide all 'data-overlay-item'
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
       document.querySelectorAll('[data-overlay-item]').forEach(function(item) {
         item.classList.remove('is-active');
       });

@@ -1,0 +1,23 @@
+.theme-fiesta-red {
+  @apply bg-fiesta-red
+}
+
+.theme-sunburst {
+  @apply bg-sunburst
+}
+
+.theme-ink-blue {
+  @apply bg-ink-blue
+}
+
+.theme-aqua {
+  @apply bg-aqua
+}
+
+.theme-mocha {
+  @apply bg-mocha
+}
+
+.theme-mossy-green {
+  @apply bg-mossy-green
+}

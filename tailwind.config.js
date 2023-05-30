@@ -35,6 +35,14 @@ module.exports = {
         'misty-blue': '#9ba4bb',
         'cloud-mist': '#eaecf1',
         'rosewater': '#ffefef',
+
+        // argmuments
+        'sunburst': '#F5AB2B',
+        'ink-blue': '#0E3346',
+        'aqua': '#619FA6',
+        'fiesta-red': '#F16064',
+        'mocha': '#AEA69D',
+        'mossy-green': '#608274',
       },
 
       fontFamily: {
