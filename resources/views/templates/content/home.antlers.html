@@ -29,53 +29,20 @@
     {{ /partial:layout/article }}
   </div>
 
-  <div class="grid grid-cols-12 text-white items-center relative mt-150 mb-50">
-
-
+  {{# mobile #}}
+  {{ partial:components/arguments :class="'lg:hidden'" }}
     {{ collection:arguments sort="order" }}
       {{ partial:components/argument-tile }}
     {{ /collection:arguments }}
-    
+  {{ /partial:components/arguments }}
+
+  {{# screens #}}
+  {{ partial:components/arguments :class="'hidden'" }}
+    {{ collection:arguments sort="order" }}
+      {{ partial:components/argument-tile }}
+    {{ /collection:arguments }}
     {{ collection:arguments sort="order" }}
       {{ partial:components/argument-overlay }}
     {{ /collection:arguments }}
-
-  </div>
-
-
+  {{ /partial:components/arguments }}
 </main>
-
-<script>
-  // on click 'data-tile-*' show the corresponding 'data-overlay-*'
-  document.querySelectorAll('[data-tile]').forEach(function(tile) {
-    tile.addEventListener('click', function() {
-
-      // hide all 'data-overlay-item'
-      document.querySelectorAll('[data-overlay-item]').forEach(function(item) {
-        item.classList.remove('is-active');
-      });
-
-      const overlayItem = document.querySelector('[data-overlay-item="'+tile.dataset.tile+'"]');
-      overlayItem.classList.add('is-active');
-    });
-  });
-
-  // on click outside of 'data-tile' hide all 'data-overlay-item'
-  document.addEventListener('click', function(event) {
-    if (!event.target.closest('[data-tile]')) {
-      document.querySelectorAll('[data-overlay-item]').forEach(function(item) {
-        item.classList.remove('is-active');
-      });
-    }
-  });
-
-  // on esc hide all 'data-overlay-item'
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      document.querySelectorAll('[data-overlay-item]').forEach(function(item) {
-        item.classList.remove('is-active');
-      });
-    }
-  });
-
-</script>

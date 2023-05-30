@@ -1,0 +1,11 @@
+.masonry-grid-item {
+  width: calc(50% - 12px);
+}
+
+.masonry-grid-sizer {
+  width: calc(50% - 12px);
+}
+
+.masonry-gutter-sizer {
+  @apply w-24;
+}

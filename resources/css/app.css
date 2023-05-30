@@ -7,7 +7,9 @@
 @import "forms/input.css";
 
 @import "components/headings.css";
+@import "components/cards.css";
 @import "components/collapsible.css";
+@import "components/masonry.css";
 
 @import "layout/base.css";
 @import "layout/themes.css";

@@ -19,15 +19,3 @@
   </div>
 {{ /partial:layout/article }}
 </main>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script>
-window.onload = function() {
-  const elem = document.querySelector('.masonry-grid');
-  const msnry = new Masonry( elem, {
-    itemSelector: '.masonry-grid-item',
-    gutter: '.masonry-gutter-sizer',
-    columnWidth: '.masonry-grid-sizer',
-    percentPosition: true
-  });
-}
-</script>

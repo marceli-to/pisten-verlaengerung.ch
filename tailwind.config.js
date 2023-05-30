@@ -12,24 +12,12 @@ module.exports = {
 
     extend: {
 
-      gridTemplateColumns: {
-        '8': 'repeat(8, minmax(0, 1fr))',
-        '14': 'repeat(14, minmax(0, 1fr))'
-      },
-
-      width: {
-        '1/7': '14.285714285714286%',
-        '1/10': '10%',
-        '4/10': '40%',
-      },
-
       borderWidth: {
         '16': '16px',
         '18': '18px',
         '20': '20px',
       },
 
-      
       colors: {
         'midnight': '#374974',
         'misty-blue': '#9ba4bb',
@@ -43,6 +31,11 @@ module.exports = {
         'fiesta-red': '#F16064',
         'mocha': '#AEA69D',
         'mossy-green': '#608274',
+      },
+
+      screens: {
+        '2xl': '1440px',
+        '3xl': '1600px',
       },
 
       fontFamily: {
@@ -65,8 +58,9 @@ module.exports = {
         '3xl': '1.75rem',    // 32px/2 => 28px/1.75
 
         '4xl': '1.75rem',   // 33px/2.063 => 28px/1.75
-        '5xl': '2.25rem',    // 44px/2.75 => 36px/2.25
-        '6xl': '2.75rem',    // 55px/3.438 => 44px/2.75
+        '5xl': '2rem',      // 36px/2.25 => 32px/2
+        '6xl': '2.25rem',    // 44px/2.75 => 36px/2.25
+        '7xl': '2.75rem',    // 55px/3.438 => 44px/2.75
       },
     },
 
