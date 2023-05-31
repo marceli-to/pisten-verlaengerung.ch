@@ -1,0 +1,15 @@
+.btn-menu .icon-cross {
+  @apply hidden;
+}
+
+.btn-menu .icon-burger {
+  @apply block;
+}
+
+.btn-menu.is-active .icon-cross {
+  @apply block;
+}
+
+.btn-menu.is-active .icon-burger {
+  @apply hidden;
+}

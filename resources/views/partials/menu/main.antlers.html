@@ -1,9 +1,19 @@
-<div class="sticky z-50 top-0 bg-white hidden sm:block">
-<nav class="container" data-menu>
-  <ul class="flex justify-between border-b-12 border-cloud-mist py-8">
-    {{ nav:collection:pages sort="order" is_menu:is="1" }}
-      {{ partial:menu/item :text="title" :url="url" target="_self" }}
-    {{ /nav:collection:pages }}
-  </ul>
-</nav>
+<a 
+  href="javascript:;" 
+  title="Menu anzeigen / verbergen"
+  class="fixed z-50 top-20 left-20 flex justify-center items-center sm:hidden w-21 h-15 btn-menu"
+  data-menu-btn>
+  {{ partial:icons/cross :class="'icon-cross'" }}
+  {{ partial:icons/burger :class="'icon-burger'" }}
+</a>
+<div class="menu" data-menu>
+  <nav class="container">
+    <ul class="sm:flex sm:justify-between sm:border-b-12 sm:border-cloud-mist sm:py-8">
+      {{ nav:collection:pages sort="order" is_menu:is="1" }}
+        {{ partial:menu/item :text="title" :url="url" target="_self" }}
+      {{ /nav:collection:pages }}
+    </ul>
+    {{ partial:menu/privacy :class="'sm:hidden'" }}
+    {{ partial:components/social_media :class="'mt-20 sm:hidden'" }}
+  </nav>
 </div>

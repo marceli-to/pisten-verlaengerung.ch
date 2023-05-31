@@ -22,15 +22,8 @@
           info@pisten-verlaengerung.ch
         </a> 
       </address>
-      <div class="mt-30 md:mt-0">
-        <ul>
-          <li>
-            <a href="/impressum" class="block md:text-right text-misty-blue hover:text-white transition-colors" title="Impressum">Impressum</a>
-          </li>
-          <li>
-            <a href="/datenschutz" class="block md:text-right text-misty-blue hover:text-white transition-colors" title="Datenschutz">Datenschutz</a>
-          </li>
-        </ul>
+      <div>
+        {{ partial:menu/privacy }}
         {{ partial:components/social_media :marginTop="'mt-30'" :hoverTextColor="'text-white'" }}
       </div>
     </div>

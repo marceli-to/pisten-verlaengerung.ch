@@ -1,0 +1,23 @@
+.btn-menu .icon-cross {
+  @apply hidden;
+}
+
+.btn-menu .icon-burger {
+  @apply block;
+}
+
+.btn-menu.is-active .icon-cross {
+  @apply block;
+}
+
+.btn-menu.is-active .icon-burger {
+  @apply hidden;
+}
+
+.menu.is-visible {
+  @apply opacity-100 z-40
+}
+
+.menu {
+  @apply opacity-0 -z-10 fixed pt-60 sm:pt-0 left-0 top-0 bg-midnight w-full h-full sm:z-50 sm:bg-white sm:sticky sm:!opacity-100
+}
