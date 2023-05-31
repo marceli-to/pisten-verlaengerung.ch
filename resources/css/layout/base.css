@@ -26,7 +26,7 @@ main {
 }
 
 .content h2:not(.news h2) {
-  @apply leading-[1.15] text-4xl md:text-6xl xl:text-7xl font-bold mb-24 xl:mb-42;
+  @apply leading-[1.15] text-3xl md:text-6xl xl:text-7xl font-bold mb-24 xl:mb-42;
 }
 
 .content h3 {
