@@ -1,5 +1,6 @@
-import Swiper from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/navigation';
 
 (function () {
 
@@ -64,8 +65,13 @@ import 'swiper/css';
 
   const initSwiper = () => {
     const swiper = new Swiper(".js-swiper", {
+      modules: [Navigation],
       slidesPerView: 1,
       spaceBetween: 0,
+      navigation: {
+        nextEl: '.js-swiper-btn-next',
+        prevEl: '.js-swiper-btn-prev',
+      },
       breakpoints: {
         600: {
           slidesPerView: 3,

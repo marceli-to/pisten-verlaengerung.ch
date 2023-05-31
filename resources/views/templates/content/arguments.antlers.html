@@ -1,15 +1,29 @@
-<main class="theme-{{theme}}">
-  <section class="container py-45 lg:py-60 xl:py-90 text-white">
-    {{ title }}
-    {{ card_text }}
-    {{ partial:layout/article }}
-      {{ content }}
-        {{ partial:components/bard }}
-      {{ /content }}
+<main>
+  <div class="theme-{{ theme}} w-full">
+    <div class="container py-45 lg:py-60 xl:py-90 text-white">
+      {{ partial:layout/article }}
+        {{ content }}
+          {{ partial:components/bard }}
+        {{ /content }}
+      {{ /partial:layout/article }}
+      {{ partial:components/share :hoverClass="'hover:!text-midnight'" }}
+    </div>
+  </div>
+  
+  {{# mobile #}}
+  {{ partial:components/cards/index :class="'sm:hidden'" }}
+    {{ collection:arguments sort="order" }}
+      {{ partial:components/cards/tile :hasInline="false" }}
+    {{ /collection:arguments }}
+  {{ /partial:components/cards/index }}
 
-      {{ if shareable }}
-        {{ partial:components/share }}
-      {{ /if }}
-    {{ /partial:layout/article }}
-  </section>
+  {{# screens #}}
+  {{ partial:components/cards/index :class="'hidden !my-0'" }}
+    {{ partial:components/swiper/index }}
+      {{ collection:arguments sort="order" }}
+        {{ partial:components/cards/tile :hasOverlay="false" }}
+      {{ /collection:arguments }}
+    {{ /partial:components/swiper/index }}
+  {{ /partial:components/cards/index }}
 </main>
+

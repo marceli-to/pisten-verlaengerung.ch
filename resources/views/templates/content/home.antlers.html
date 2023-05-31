@@ -15,26 +15,21 @@
 
   {{# mobile #}}
   {{ partial:components/cards/index :class="'sm:hidden'" }}
-
     {{ collection:arguments sort="order" }}
-      {{ partial:components/cards/tile }}
+      {{ partial:components/cards/tile :hasInline="'true'" }}
     {{ /collection:arguments }}
-    
   {{ /partial:components/cards/index }}
 
   {{# screens #}}
   {{ partial:components/cards/index :class="'hidden'" }}
-
     {{ partial:components/swiper/index }}
       {{ collection:arguments sort="order" }}
-        {{ partial:components/cards/tile }}
+        {{ partial:components/cards/tile :hasOverlay="'true'" }}
       {{ /collection:arguments }}
     {{ /partial:components/swiper/index }}
-
     {{ collection:arguments sort="order" }}
       {{ partial:components/cards/overlay }}
     {{ /collection:arguments }}
-
   {{ /partial:components/cards/index }}
 </main>
 

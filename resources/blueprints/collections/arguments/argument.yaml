@@ -26,14 +26,9 @@ tabs:
                 - h2
                 - h3
                 - bold
-                - italic
                 - unorderedlist
-                - orderedlist
-                - removeformat
-                - quote
+                - subscript
                 - anchor
-                - image
-                - table
               smart_typography: false
               save_html: false
               inline: false
@@ -55,6 +50,26 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
+              sets:
+                text_image:
+                  display: 'Text, Image'
+                  instructions: null
+                  icon: text-formatting-image-left
+                  sets:
+                    text_image:
+                      display: 'Text, Image'
+                      instructions: null
+                      icon: text-formatting-image-left
+                      fields:
+                        -
+                          import: text_image
+                    video:
+                      display: Video
+                      instructions: null
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          import: video
           -
             handle: theme
             field:
