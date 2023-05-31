@@ -1,0 +1,15 @@
+<main class="theme-{{theme}}">
+  <section class="container py-45 lg:py-60 xl:py-90 text-white">
+    {{ title }}
+    {{ card_text }}
+    {{ partial:layout/article }}
+      {{ content }}
+        {{ partial:components/bard }}
+      {{ /content }}
+
+      {{ if shareable }}
+        {{ partial:components/share }}
+      {{ /if }}
+    {{ /partial:layout/article }}
+  </section>
+</main>

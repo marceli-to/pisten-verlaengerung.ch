@@ -3,23 +3,7 @@
     {{ partial:layout/article }}
     
       {{ content }}
-
-        {{ if type == 'text' }}
-          {{ text }}
-        {{ /if }}
-
-        {{ if type == 'video'}}
-          {{ partial:components/video }}
-        {{ /if }}
-
-        {{ if type == 'collapsible' }}
-          {{ partial:components/collapsible }}
-        {{ /if }}
-
-        {{ if type == 'text_image' }}
-          {{ partial:components/text_image }}
-        {{ /if }}
-
+        {{ partial:components/bard }}
       {{ /content }}
 
       {{ if shareable }}
