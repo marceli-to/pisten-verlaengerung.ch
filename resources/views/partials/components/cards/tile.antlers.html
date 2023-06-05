@@ -1,22 +1,14 @@
 {{ if hasInline || hasOverlay }}
   <div 
-    class="swiper-slide sm:aspect-square w-full h-full !flex sm:flex-col justify-between p-20 3xl:p-25 4xl:p-35 pt-15 3xl:pt-20 4xl:pt-30 cursor-pointer theme-{{theme}}" 
+    class="swiper-slide sm:aspect-square w-full h-full cursor-pointer theme-{{theme}}" 
     data-tile="{{ card_slug }}">
-    <h3 class="font-bold leading-[1.15] text-right text-3xl xl:text-5xl 3xl:text-6xl 4xl:text-7xl word-break order-2 sm:order-1">
-      {{ card_title | nl2br }}
-    </h3>
-    <div class="order-1 sm:order-2">
-      {{ partial:icons/cards/{{card_slug}} }}
-    </div>
+    {{ partial:icons/cards/{{card_slug}} :class="'w-full h-auto hidden sm:block'" }}
+    {{ partial:icons/cards/sm/{{card_slug}} :class="'w-full h-auto block sm:hidden'" }}
   </div>
 {{ else }}
-  <a href="{{ url }}" title="{{ card_title }}" class="swiper-slide sm:aspect-square w-full h-full !flex sm:flex-col justify-between p-20 3xl:p-25 4xl:p-35 pt-15 3xl:pt-20 4xl:pt-30 cursor-pointer theme-{{theme}}">
-    <h3 class="font-bold leading-[1.15] text-right text-3xl xl:text-5xl 3xl:text-6xl 4xl:text-7xl word-break order-2 sm:order-1">
-      {{ card_title | nl2br }}
-    </h3>
-    <div class="order-1 sm:order-2">
-      {{ partial:icons/cards/{{card_slug}} }}
-    </div>
+  <a href="{{ url }}" title="{{ card_title }}" class="swiper-slide sm:aspect-square w-full h-full cursor-pointer theme-{{theme}}">
+    {{ partial:icons/cards/{{card_slug}} :class="'w-full h-auto hidden sm:block'" }}
+    {{ partial:icons/cards/sm/{{card_slug}} :class="'w-full h-auto block sm:hidden'" }}
   </a>
 {{ /if }}
 
