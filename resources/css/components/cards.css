@@ -1,5 +1,13 @@
 .card-argument-overlay.is-active {
-  @apply block opacity-100 z-10 transition-all;
+  @apply block opacity-100 z-[100] transition-all;
+}
+
+.card-argument-overlay-bg {
+  @apply -z-10 opacity-0 transition-all;
+}
+
+.has-overlay .card-argument-overlay-bg {
+  @apply z-50 opacity-50 cursor-pointer;
 }
 
 .card-argument-inline.is-active {

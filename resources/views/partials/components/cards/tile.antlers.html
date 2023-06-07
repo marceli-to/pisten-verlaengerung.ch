@@ -1,6 +1,6 @@
 {{ if hasInline || hasOverlay }}
   <div 
-    class="swiper-slide sm:aspect-square w-full h-full cursor-pointer theme-{{theme}}" 
+    class="swiper-slide sm:aspect-square w-full h-full cursor-pointer theme-{{theme}} sm:hover:brightness-90" 
     data-tile="{{ card_slug }}">
     {{ partial:icons/cards/{{card_slug}} :class="'w-full h-auto hidden sm:block'" }}
     {{ partial:icons/cards/sm/{{card_slug}} :class="'w-full h-auto block sm:hidden'" }}

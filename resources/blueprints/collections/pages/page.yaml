@@ -24,14 +24,9 @@ tabs:
                 - h2
                 - h3
                 - bold
-                - italic
                 - unorderedlist
-                - orderedlist
                 - removeformat
-                - quote
                 - anchor
-                - image
-                - table
               save_html: false
               inline: false
               toolbar_mode: fixed
