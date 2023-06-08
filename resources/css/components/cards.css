@@ -7,7 +7,7 @@
 }
 
 .has-overlay .card-argument-overlay-bg {
-  @apply z-50 opacity-50 cursor-pointer;
+  @apply z-50 opacity-70 cursor-pointer;
 }
 
 .card-argument-inline.is-active {

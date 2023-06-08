@@ -1,4 +1,4 @@
-<main class="py-45 lg:py-60 xl:py-90">
+<main class="pt-45 lg:pt-60 xl:pt-90 pb-15 xl:pb-30">
   <div class="container">
     {{ partial:layout/article }}
     
@@ -33,6 +33,12 @@
   {{ /partial:components/cards/index }}
 
   <div class="card-argument-overlay-bg bg-white hidden sm:block h-full w-full fixed left-0 top-0 opacity-50 z-30"></div>
+
+  <div class="bg-midnight mt-30 md:mt-0 py-30 md:py-45 xl:py-60">
+    {{ collection:testimonials confirm_web_usage:is="true" limit="1" sort="random" }}
+      {{ partial:components/member :isSingle="'true'" }}
+    {{ /collection:testimonials }}
+  </div>
 
 </main>
 
