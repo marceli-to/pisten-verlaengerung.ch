@@ -32,6 +32,7 @@ module.exports = {
         'fiesta-red': '#F16064',
         'mocha': '#AEA69D',
         'mossy-green': '#608274',
+        'serene-sea': '#687598'
       },
 
       screens: {

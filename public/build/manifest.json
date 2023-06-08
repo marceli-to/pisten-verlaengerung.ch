@@ -12,14 +12,14 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app-9e4a3489.css",
+    "file": "assets/app-d417c7b8.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-9e4a3489.css"
+      "assets/app-d417c7b8.css"
     ],
-    "file": "assets/app-4672ed36.js",
+    "file": "assets/app-ad15e3ae.js",
     "imports": [
       "__commonjsHelpers-28e086c5.js"
     ],

@@ -1,0 +1,37 @@
+<main class="container py-45 lg:py-60 xl:py-90">
+  {{ partial:layout/article }}
+    {{ content }}
+      {{ partial:components/bard }}
+    {{ /content }}
+
+    <form class="newsletter-form mt-20 xl:mt-40" action="https://355647.eu2.cleverreach.com/f/355647-360098/wcs/" method="POST" target="_blank">
+      <div class="mb-20 md:mb-30 xl:mb-40 relative">
+        <input type="text" name="1113138" placeholder="Vorname*" class="bg-cloud-mist border-0 ring-0 focus:ring-0 px-8 md:px-10 py-12 md:py-15 xl:py-20 w-full text-base md:text-md xl:text-lg placeholder:text-xxs md:placeholder:text-xs xl:placeholder:text-sm placeholder:leading-none placeholder:text-midnight">
+        {{ partial:icons/form/invalid }}
+        {{ partial:icons/form/valid }}
+      </div>
+      <div class="mb-20 md:mb-30 xl:mb-40 relative">
+        <input type="text" name="1113139" placeholder="Name*" class="bg-cloud-mist border-0 ring-0 focus:ring-0 px-8 md:px-10 py-12 md:py-15 xl:py-20 w-full text-base md:text-md xl:text-lg placeholder:text-xxs md:placeholder:text-xs xl:placeholder:text-sm placeholder:leading-none placeholder:text-midnight">
+        {{ partial:icons/form/invalid }}
+        {{ partial:icons/form/valid }}
+      </div>
+      <div class="mb-20 md:mb-30 xl:mb-40 relative">
+        <input type="text" name="1113140" placeholder="Ort*" class="bg-cloud-mist border-0 ring-0 focus:ring-0 px-8 md:px-10 py-12 md:py-15 xl:py-20 w-full text-base md:text-md xl:text-lg placeholder:text-xxs md:placeholder:text-xs xl:placeholder:text-sm placeholder:leading-none placeholder:text-midnight">
+        {{ partial:icons/form/invalid }}
+        {{ partial:icons/form/valid }}  
+      </div>
+      <div class="mb-20 md:mb-30 xl:mb-40 relative">
+        <input type="email" name="email" placeholder="E-Mail*" class="bg-cloud-mist border-0 ring-0 focus:ring-0 px-8 md:px-10 py-12 md:py-15 xl:py-20 w-full text-base md:text-md xl:text-lg placeholder:text-xxs md:placeholder:text-xs xl:placeholder:text-sm placeholder:leading-none placeholder:text-midnight">
+        {{ partial:icons/form/invalid }}
+        {{ partial:icons/form/valid }}
+      </div>
+      <div class="md:mb-30 relative mt-40 md:mt-60 xl:mt-80 mb-0 xl:!mb-30 flex justify-center w-full">
+        <button class="bg-misty-blue hover:bg-midnight font-bold text-white py-10 px-25 leading-none inline-flex items-center w-auto text-left" type="submit">
+          Anmelden
+        </button>
+      </div>
+    </form>
+
+
+  {{ /partial:layout/article }}
+</main>
