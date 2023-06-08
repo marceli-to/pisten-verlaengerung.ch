@@ -20,11 +20,10 @@ import 'swiper/css/navigation';
 
     initSwiper();
 
-    // on click 'data-tile-*' show the corresponding 'data-overlay-*'
-    // only if its a non-touch device
-    if (!('ontouchstart' in window)) {
+    // on touchstart 'data-tile-*' show the corresponding 'data-overlay-*'
+    if (('ontouchstart' in window)) {
       document.querySelectorAll(`[${selectors.tile}]`).forEach(function(tile) {
-        tile.addEventListener('click', function() {
+        tile.addEventListener('touchstart', function() {
 
           hideAllOverlaysItems();
           hideAllInlineItems();
@@ -38,11 +37,11 @@ import 'swiper/css/navigation';
         });
       });
     }
-
-    // on touchstart 'data-tile-*' show the corresponding 'data-overlay-*'
-    if (!('ontouchstart' in window)) {
+    // on click 'data-tile-*' show the corresponding 'data-overlay-*'
+    // only if its a non-touch device
+    else {
       document.querySelectorAll(`[${selectors.tile}]`).forEach(function(tile) {
-        tile.addEventListener('touchstart', function() {
+        tile.addEventListener('click', function() {
 
           hideAllOverlaysItems();
           hideAllInlineItems();
