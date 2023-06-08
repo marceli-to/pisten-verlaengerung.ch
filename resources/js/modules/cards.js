@@ -19,42 +19,42 @@ import 'swiper/css/navigation';
   const init = () => {
 
     initSwiper();
+    document.querySelectorAll(`[${selectors.tile}]`).forEach(function(tile) {
+      tile.addEventListener('click', function() {
 
-    // on touchstart 'data-tile-*' show the corresponding 'data-overlay-*'
-    if (('ontouchstart' in window)) {
-      document.querySelectorAll(`[${selectors.tile}]`).forEach(function(tile) {
-        tile.addEventListener('touchstart', function() {
+        hideAllOverlaysItems();
+        hideAllInlineItems();
 
-          hideAllOverlaysItems();
-          hideAllInlineItems();
+        const overlayItem = document.querySelector(`[${selectors.overlay}="${tile.dataset.tile}"]`);
+        showOverlayItem(overlayItem);
 
-          const overlayItem = document.querySelector(`[${selectors.overlay}="${tile.dataset.tile}"]`);
-          showOverlayItem(overlayItem);
-
-          const inlineItem = document.querySelector(`[${selectors.inline}="${tile.dataset.tile}"]`);
-          showInlineItem(inlineItem);
-          showOverlay();
-        });
+        const inlineItem = document.querySelector(`[${selectors.inline}="${tile.dataset.tile}"]`);
+        showInlineItem(inlineItem);
       });
-    }
-    // on click 'data-tile-*' show the corresponding 'data-overlay-*'
-    // only if its a non-touch device
-    else {
-      document.querySelectorAll(`[${selectors.tile}]`).forEach(function(tile) {
-        tile.addEventListener('click', function() {
+    });
 
-          hideAllOverlaysItems();
-          hideAllInlineItems();
+    // // on touchstart 'data-tile-*' show the corresponding 'data-overlay-*'
+    // if (('ontouchstart' in window)) {
+    //   document.querySelectorAll(`[${selectors.tile}]`).forEach(function(tile) {
+    //     tile.addEventListener('touchstart', function() {
 
-          const overlayItem = document.querySelector(`[${selectors.overlay}="${tile.dataset.tile}"]`);
-          showOverlayItem(overlayItem);
+    //       hideAllOverlaysItems();
+    //       hideAllInlineItems();
 
-          const inlineItem = document.querySelector(`[${selectors.inline}="${tile.dataset.tile}"]`);
-          showInlineItem(inlineItem);
-          showOverlay();
-        });
-      });
-    }
+    //       const overlayItem = document.querySelector(`[${selectors.overlay}="${tile.dataset.tile}"]`);
+    //       showOverlayItem(overlayItem);
+
+    //       const inlineItem = document.querySelector(`[${selectors.inline}="${tile.dataset.tile}"]`);
+    //       showInlineItem(inlineItem);
+    //       showOverlay();
+    //     });
+    //   });
+    // }
+    // // on click 'data-tile-*' show the corresponding 'data-overlay-*'
+    // // only if its a non-touch device
+    // else {
+
+    // }
     
     // if the html has the class 'has-overlay' and the scrolls and the data-overlay-item is out of view, hide it
     // use isInViewport function from: https://vanillajstoolkit.com/helpers/isinviewport/
@@ -100,6 +100,7 @@ import 'swiper/css/navigation';
 
   const showOverlayItem = (item) => {
     item.classList.add(cssClasses.active);
+    showOverlay();
   };
   
   const hideOverlayItem = (item) => {
