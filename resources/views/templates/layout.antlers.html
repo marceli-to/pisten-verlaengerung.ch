@@ -5,16 +5,16 @@
 <title>{{ title ?? site:name }} &bull; Kampagne «Ja zur Pistenverlängerung»</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Erfahren Sie, wie durch Pistenverlängerungen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">
+{{ if  open_graph_description }}<meta name="description" content="{{ open_graph_description }}">{{ else }}<meta name="description" content="Erfahren Sie, wie durch Pistenverlängerungen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">{{ /if}}
 <meta property="og:title" content="{{ title ?? site:name }} &bull; Kampagne «Ja zur Pistenverlängerung»">
-<meta property="og:description" content="Erfahren Sie, wie durch Pistenverlängerungen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">
-<meta property="og:image" content="{{ config:client:base_url }}/img/pistenverlaengerung-og.png">
+{{ if  open_graph_description }}<meta name="og:description" content="{{ open_graph_description }}">{{ else }}<meta property="og:description" content="Erfahren Sie, wie durch Pistenverlängerungen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">{{ /if }}
+{{ if open_graph_image }}<meta property="og:image" content="{{ config:client:base_url }}{{ open_graph_image }}"> {{ else }}<meta property="og:image" content="{{ config:client:base_url }}/img/pistenverlaengerung-og.png">{{ /if }}
 <meta property="og:url" content="{{ site_url }}{{ current_url }}">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
+{{ if  open_graph_description }}<meta name="twitter:description" content="{{ open_graph_description }}">{{ else }}<meta name="twitter:description" content="Erfahren Sie, wie durch Pistenverlängerungen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">{{ /if }}
 <meta name="twitter:title" content="{{ title ?? site:name }} &bull; Kampagne «Ja zur Pistenverlängerung»">
-<meta name="twitter:description" content="Erfahren Sie, wie durch Pistenverlängerungen mehr Sicherheit, Pünktlichkeit und Nachtruhe gewährleistet werden, ohne die Kapazität zu beeinträchtigen oder auf Steuergelder zurückzugreifen. Besuchen Sie uns bald wieder, um weitere Informationen zu erhalten.">
-<meta name="twitter:image" content="{{ config:client:base_url }}/img/pistenverlaengerung-og.png">
+{{ if open_graph_image }}<meta property="twitter:image" content="{{ config:client:base_url }}{{ open_graph_image }}"> {{ else }}<meta property="twitter:image" content="{{ config:client:base_url }}/img/pistenverlaengerung-og.png">{{ /if }}
 <meta name="csrf-token" content="{{ csrf_token }}">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -26,6 +26,7 @@
 {{ vite src="resources/js/app.js" }}
 </head>
 <body class="font-light leading-tight text-midnight text-xl md:text-2xl xl:text-3xl">
+  
   {{ partial:layout/header }}
   {{ template_content }}
   {{ partial:layout/footer }}

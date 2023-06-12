@@ -71,6 +71,17 @@ tabs:
                         -
                           import: video
           -
+            handle: card_text
+            field:
+              antlers: false
+              type: textarea
+              display: 'Overlay text'
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
             handle: theme
             field:
               options:
@@ -95,40 +106,13 @@ tabs:
               hide_display: false
               validate:
                 - required
-      -
-        display: Card
-        fields:
-          -
-            handle: card_title
-            field:
-              antlers: false
-              type: textarea
-              display: 'Card title'
-              icon: textarea
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
-              validate:
-                - required
-          -
-            handle: card_text
-            field:
-              antlers: false
-              type: textarea
-              display: 'Card text'
-              icon: textarea
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              hide_display: false
           -
             handle: card_slug
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Card slug'
+              display: Slug
               icon: text
               listable: hidden
               instructions_position: above
@@ -136,6 +120,40 @@ tabs:
               hide_display: false
               validate:
                 - required
+      -
+        display: 'SEO, Social Media'
+        fields:
+          -
+            handle: open_graph_description
+            field:
+              antlers: false
+              type: textarea
+              display: 'Open graph description'
+              icon: textarea
+              instructions: 'Short description for meta description and open graph description, approx. 2 - 3 sentences about the contents of the page.'
+              listable: hidden
+              instructions_position: below
+              visibility: visible
+              hide_display: false
+          -
+            handle: open_graph_image
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Open graph image'
+              icon: assets
+              instructions: 'Will be used for sharing on social media. Image should be 1500px in width or height.'
+              listable: hidden
+              instructions_position: below
+              visibility: visible
+              hide_display: false
+              max_files: 1
+              min_files: 1
   sidebar:
     display: Sidebar
     sections:
