@@ -6,7 +6,9 @@
           {{ partial:components/bard }}
         {{ /content }}
       {{ /partial:layout/article }}
-      {{ partial:components/share :hoverClass="'hover:!text-midnight'" }}
+      {{ if theme }}
+        {{ partial:components/share :hoverClass="'hover:!text-midnight'" }}
+      {{ /if }}
     </div>
   </div>
   
