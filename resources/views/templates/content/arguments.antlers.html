@@ -1,6 +1,6 @@
 <main>
-  <div class="theme-{{ theme }} w-full mt-20 sm:mt-0">
-    <div class="container py-35 lg:py-60 xl:py-90 text-white">
+  <div class="{{ if theme }} theme-{{ theme }} {{ /if }} w-full mt-20 sm:mt-0">
+    <div class="container py-35 lg:py-60 xl:py-90 {{ if theme }} text-white {{ /if }}">
       {{ partial:layout/article }}
         {{ content }}
           {{ partial:components/bard }}
