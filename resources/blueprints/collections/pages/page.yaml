@@ -73,6 +73,13 @@ tabs:
                       fields:
                         -
                           import: text_image
+                    image:
+                      display: Image
+                      instructions: null
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image
               hide_display: false
       -
         display: 'SEO, Social Media'

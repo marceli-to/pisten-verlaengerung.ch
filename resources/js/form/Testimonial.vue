@@ -43,6 +43,14 @@
       <form-group>
         <form-input 
           type="text" 
+          v-model="form.function" 
+          placeholder="Funktion">
+        </form-input>
+      </form-group>
+
+      <form-group>
+        <form-input 
+          type="text" 
           v-model="form.party" 
           placeholder="Partei">
         </form-input>
@@ -148,6 +156,7 @@ data() {
       party: null,
       location: null,
       email: null,
+      function: null,
       quote: null,
       image: null,
       copyright: null,
@@ -187,6 +196,7 @@ methods: {
     formData.append('name', this.form.name ? this.form.name : '');
     formData.append('firstname', this.form.firstname ? this.form.firstname : '');
     formData.append('email', this.form.email ? this.form.email : '');
+    formData.append('function', this.form.function ? this.form.function : '');
     formData.append('location', this.form.location ? this.form.location : '');
     formData.append('party', this.form.party ? this.form.party : '');
     formData.append('quote', this.form.quote ? this.form.quote : '');

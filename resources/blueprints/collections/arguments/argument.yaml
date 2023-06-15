@@ -70,6 +70,13 @@ tabs:
                       fields:
                         -
                           import: video
+                    image:
+                      display: Image
+                      instructions: null
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: image
           -
             handle: card_text
             field:
@@ -153,7 +160,6 @@ tabs:
               visibility: visible
               hide_display: false
               max_files: 1
-              min_files: 1
   sidebar:
     display: Sidebar
     sections:

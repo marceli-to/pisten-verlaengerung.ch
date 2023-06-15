@@ -1,9 +1,5 @@
-{{ if code }}
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/{{ code }}" frameborder="0" allowfullscreen></iframe>
-  </div>
-{{ else }}  
-  <figure class="mx-auto max-w-xl my-50 xl:my-90">
-    <img src="/img/placeholder-video.png" width="665" height="374" title="Erklärvideo" class="block w-full h-auto" />
-  </figure>
-{{ /if }}
+<div class="bg-midnight mx-auto max-w-4xl my-50 xl:my-90">
+  <video controls autoplay poster="/assets/pistenverlaengerung.png">
+    <source src="{{ video }}" type="video/mp4">
+  </video>
+</div>

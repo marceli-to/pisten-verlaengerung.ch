@@ -22,7 +22,7 @@ main {
 }
 
 .content a {
-  @apply hover:underline hover:underline-offset-8 hover:decoration-1;
+  @apply underline underline-offset-8 decoration-1 hover:no-underline;
 }
 
 .content h2:not(.news h2) {

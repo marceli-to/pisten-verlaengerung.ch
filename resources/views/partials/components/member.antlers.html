@@ -15,10 +15,10 @@
   </figure>
   <div class="px-20 md:px-0 text-white text-center max-w-xl mx-auto">
     {{ if quote }}
-      {{ quote}}
+      &laquo;{{ quote}}&raquo;
     {{ /if }}
     <div class="font-bold text-base md:text-md xl:text-lg mt-20 xl:mt-30">
-      {{ firstname }} {{ name }}<br>
+      {{ firstname }} {{ name }}{{ if function }}, {{function}} {{ /if }}<br>
       {{ location }}
     </div>
   </div>
@@ -40,10 +40,10 @@
     </figure>
     <div class="md:col-span-8 xl:col-span-9 text-white text-center md:text-left max-w-xl md:max-w-none mx-aut md:ml-25 xl:ml-65">
       {{ if quote }}
-        {{ quote}}
+        &laquo;{{ quote}}&raquo;
       {{ /if }}
       <div class="font-bold text-base md:text-md xl:text-lg mt-20 xl:mt-30">
-        {{ firstname }} {{ name }}<br>
+        {{ firstname }} {{ name }}{{ if function }}, {{function}} {{ /if }}<br>
         {{ location }}
       </div>
     </div>

@@ -112,6 +112,7 @@ import 'swiper/css/navigation';
   const initSwiper = () => {
     const swiper = new Swiper(".js-swiper", {
       modules: [Navigation],
+      loop: false,
       slidesPerView: 1,
       spaceBetween: 0,
       navigation: {
