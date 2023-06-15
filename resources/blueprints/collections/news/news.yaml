@@ -83,6 +83,7 @@ tabs:
               buttons:
                 - h3
                 - bold
+                - unorderedlist
                 - anchor
               smart_typography: false
               save_html: false
@@ -125,6 +126,9 @@ tabs:
                       fields:
                         -
                           import: text_image
+              always_show_set_button: false
+              collapse: false
+              previews: true
   sidebar:
     display: Sidebar
     sections:

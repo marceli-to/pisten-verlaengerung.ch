@@ -8,12 +8,12 @@
   <div class="mt-20 md:mt-24 xl:mt-42 relative masonry-grid hidden sm:block">
     <div class="masonry-grid-sizer"></div>
     <div class="masonry-gutter-sizer"></div>
-    {{ collection:news sort="date:desc" }}
+    {{ collection:news sort="order" }}
       {{ partial:components/news_preview :isMasonry="'true'" }}
     {{ /collection:news }}
   </div>
   <div class="mt-20 md:mt-24 xl:mt-42 relative block sm:hidden">
-    {{ collection:news sort="date:desc" }}
+    {{ collection:news sort="order" }}
       {{ partial:components/news_preview :isMasonry="'false'"}}
     {{ /collection:news }}
   </div>

@@ -25,6 +25,18 @@ main {
   @apply underline underline-offset-8 decoration-1 hover:no-underline;
 }
 
+.content ul {
+  @apply list-disc m-0 p-0 ml-24 mb-20 md:mb-24 xl:mb-42;
+}
+
+.content ul li  {
+  @apply list-item
+}
+
+.content ul li p {
+  @apply inline-block !mb-0;
+}
+
 .content h2:not(.news h2) {
   @apply leading-[1.15] text-3xl md:text-6xl xl:text-7xl font-bold mb-24 xl:mb-42;
 }
@@ -39,6 +51,10 @@ strong {
 
 p {
   @apply mb-20 md:mb-24 xl:mb-42
+}
+
+p + ul {
+  @apply !mt-20 md:!mt-24 xl:!mt-42
 }
 
 p:last-child,
