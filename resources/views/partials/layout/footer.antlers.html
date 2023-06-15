@@ -6,16 +6,25 @@
   <span class="xl:block">Newsletter</span> 
 </a>
 <footer>
-  <div class="bg-cloud-mist w-full py-30 xl:py-45">
-    <div class="container md:flex md:items-center md:justify-between">
-      <a href="https://www.pro-flughafen.ch" target="_blank" rel="noopener" title="Pro Flughafen" class="block w-[320px] md:w-[200px] lg:w-[320px] h-auto mb-30 md:mb-0">
-        {{ partial:icons/logos/pro-flughafen :class="'w-full h-auto block'" }}
+  <div class="bg-cloud-mist w-full py-30">
+    <div class="container md:grid md:grid-cols-12 md:gap-20 xl:gap-50 xl:gap-y-30">
+      <a href="https://pro-flughafen.ch" target="_blank" rel="noopener" title="Pro Flughafen" class="block mb-30 md:mb-0 md:col-span-3 xl:col-span-3">
+        {{ partial:icons/logos/pro-flughafen :class="'max-w-sm md:max-w-none w-full h-auto block'" }}
       </a>
-      <a href="https://komitee-weltoffenes-zuerich.ch/" target="_blank" rel="noopener" title="Komitee Weltoffenes Zürich" class="block w-[225px] md:w-[145px] lg:w-[225px] h-auto mb-30 md:mb-0">
-        {{ partial:icons/logos/komitee-weltoffenes-zuerich :class="'w-full h-auto block'" }}
+      <a href="https://komitee-weltoffenes-zuerich.ch/" target="_blank" rel="noopener" title="Komitee Weltoffenes Zürich" class="block mb-30 md:mb-0 md:col-span-3 xl:col-span-3">
+        {{ partial:icons/logos/komitee-weltoffenes-zuerich :class="'max-w-sm md:max-w-none w-full h-auto block'" }}
       </a>
-      <a href="https://ivz.ch" target="_blank" rel="noopener" title="IVZ" class="block w-[185px] md:w-[125px] lg:w-[185px] h-auto">
-        {{ partial:icons/logos/ivz :class="'w-full h-auto block'" }}
+      <a href="https://ivz.ch" target="_blank" rel="noopener" title="IVZ" class="block mb-30 md:mb-0 md:col-span-3 xl:col-span-3">
+        {{ partial:icons/logos/ivz :class="'max-w-sm md:max-w-none w-full h-auto block'" }}
+      </a>
+      <a href="https://zuercher-bankenverband.ch" target="_blank" rel="noopener" title="Zürcher Bankenverband" class="block mb-30 md:mb-0 md:col-span-3 xl:col-span-3">
+        {{ partial:icons/logos/zuercher-bankenverband :class="'max-w-sm md:max-w-none w-full h-auto block'" }}
+      </a>
+      <a href="https://www.zhk.ch" target="_blank" rel="noopener" title="Zürcher Handelskammer" class="block mb-30 md:mb-0 md:col-span-3 xl:col-span-3">
+        {{ partial:icons/logos/zhhk :class="'max-w-sm md:max-w-none w-full h-auto block'" }}
+      </a>
+      <a href="https://www.aviationsuisse.org" target="_blank" rel="noopener" title="Aviationsuisse" class="block mb-30 md:mb-0 md:col-span-3 xl:col-span-3">
+        {{ partial:icons/logos/aviationsuisse :class="'max-w-sm md:max-w-none w-full h-auto block'" }}
       </a>
     </div>
   </div>

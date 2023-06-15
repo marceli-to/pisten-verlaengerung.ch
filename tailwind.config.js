@@ -12,6 +12,10 @@ module.exports = {
 
     extend: {
 
+      gridTemplateColumns: {
+        '15': 'repeat(15, minmax(0, 1fr))',
+      },
+
       borderWidth: {
         '12': '12px',
         '16': '16px',
