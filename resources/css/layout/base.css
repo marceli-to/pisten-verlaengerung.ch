@@ -53,6 +53,7 @@ p {
   @apply mb-20 md:mb-24 xl:mb-42
 }
 
+p + figure,
 p + ul {
   @apply !mt-20 md:!mt-24 xl:!mt-42
 }
