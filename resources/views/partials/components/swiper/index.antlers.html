@@ -2,10 +2,10 @@
   <div class="swiper-wrapper">
     {{ slot }}
   </div>
-  <button class="absolute left-0 top-0 z-50 w-50 h-full flex items-center justify-center js-swiper-btn-prev">
+  <a href="javascript:;" class="absolute left-0 top-0 z-50 w-50 h-full flex items-center justify-center js-swiper-btn-prev" title="Vorheriger Grund">
     {{ partial:icons/chevron-prev :class="'text-white w-30 h-auto block'" }}
-  </button>
-  <button class="absolute right-0 top-0 z-50 w-50 h-full flex items-center justify-center js-swiper-btn-next">
+  </a>
+  <a href="javascript:;" class="absolute right-0 top-0 z-50 w-50 h-full flex items-center justify-center js-swiper-btn-next" title="Nächster Grund">
     {{ partial:icons/chevron-next :class="'text-white w-30 h-auto block'" }}
-  </button>
+  </a>
 </div>
