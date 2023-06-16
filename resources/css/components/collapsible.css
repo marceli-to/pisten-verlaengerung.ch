@@ -13,3 +13,7 @@ details[open] .plus {
 details[open] .minus {
   @apply block
 }
+
+details div sub {
+  @apply text-xs
+}
