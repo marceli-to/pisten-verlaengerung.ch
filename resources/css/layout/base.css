@@ -34,7 +34,7 @@ main {
 }
 
 .content ul li p {
-  @apply inline-block !mb-0;
+  @apply !mb-0;
 }
 
 .content h2:not(.news h2) {
