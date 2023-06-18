@@ -125,6 +125,7 @@ tabs:
               instructions_position: below
               visibility: visible
               hide_display: false
+              max_files: 1
   sidebar:
     display: Sidebar
     sections:
