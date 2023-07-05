@@ -1,4 +1,5 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -112,7 +113,7 @@ import 'swiper/css/navigation';
   const initSwiper = () => {
     const swiper = new Swiper(".js-swiper", {
       modules: [Navigation],
-      loop: false,
+      loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
       navigation: {
@@ -122,16 +123,20 @@ import 'swiper/css/navigation';
       breakpoints: {
         600: {
           slidesPerView: 3,
+          loop: true,
         },
-        860: {
-          slidesPerView: 4,
-        },
-        1100: {
-          slidesPerView: 5,
-        },
-        1400: {
+        // 860: {
+        //   slidesPerView: 4,
+        //   loop: true,
+        // },
+        960: {
           slidesPerView: 6,
+          loop: true,
         },
+        // 1400: {
+        //   slidesPerView: 6,
+        //   loop: true,
+        // },
       },
     });
   };

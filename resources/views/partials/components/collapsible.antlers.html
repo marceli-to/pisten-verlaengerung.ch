@@ -1,4 +1,6 @@
-<details class="border-t last-of-type:border-b border-cloud-mist py-10 md:py-20 {{ class }}">
+<details 
+  class="border-t last-of-type:border-b border-cloud-mist py-10 md:py-20 scroll-m-54 md:scroll-m-66 {{ class }}"
+  data-slug="{{ title | strip_tags | slugify }}">
   <summary class="flex items-start leading-none justify-start cursor-pointer">
     {{ partial:icons/plus :class="'plus block w-15 h-15 md:w-20 md:h-20 shrink-0 mt-7'" }}
     {{ partial:icons/minus :class="'minus hidden w-15 h-15 md:w-20 md:h-20 shrink-0 mt-7'" }}
