@@ -119,7 +119,7 @@ import 'swiper/css/navigation';
       document.querySelectorAll(`[data-slug-detail="${urlParts[urlParts.length - 1]}"]`).forEach(function(item) {
         item.classList.remove('hidden');
         // scroll to the element if the screen size is smaller than 400px
-        if (window.innerWidth < 400) {
+        if (window.innerWidth < 600) {
           item.scrollIntoView({behavior: 'smooth'});
         }
       });
