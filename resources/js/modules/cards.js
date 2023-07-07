@@ -118,8 +118,10 @@ import 'swiper/css/navigation';
       // so we need to add the class hidden to all elements with data-slug-detail
       document.querySelectorAll(`[data-slug-detail="${urlParts[urlParts.length - 1]}"]`).forEach(function(item) {
         item.classList.remove('hidden');
-        // scroll to the element
-        item.scrollIntoView({behavior: 'smooth'});
+        // scroll to the element if the screen size is smaller than 400px
+        if (window.innerWidth < 400) {
+          item.scrollIntoView({behavior: 'smooth'});
+        }
       });
     }
   };
