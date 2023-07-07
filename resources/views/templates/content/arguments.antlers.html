@@ -1,6 +1,6 @@
 <main>
-  <div class="{{ if theme }} theme-{{ theme }} {{ /if }} w-full mt-20 sm:mt-0">
-    <div class="container py-35 lg:py-60 xl:py-90 {{ if theme }} text-white {{ /if }}">
+  <div class="{{ if theme }} theme-{{ theme }} {{ /if }} {{ if slug != 'gute-gruende' }} hidden {{ /if }} sm:!block w-full mt-20 sm:mt-0">
+    <div class="container py-35 lg:py-60 xl:py-90 {{ if theme }} text-white {{ /if }}" data-slug-detail="{{ slug }}">
       {{ partial:layout/article }}
         {{ content }}
           {{ partial:components/bard }}
@@ -13,8 +13,21 @@
   </div>
   
   {{# mobile #}}
+
   {{ partial:components/cards/index :class="'sm:hidden'" }}
     {{ collection:arguments sort="order" }}
+      <div class="{{ if theme }} theme-{{ theme }} {{ /if }} w-full hidden" data-slug-detail="{{ slug }}">
+        <div class="container py-35 lg:py-60 xl:py-90 {{ if theme }} text-white {{ /if }}">
+          {{ partial:layout/article }}
+            {{ content }}
+              {{ partial:components/bard }}
+            {{ /content }}
+          {{ /partial:layout/article }}
+          {{ if shareable }}
+            {{ partial:components/share :hoverClass="'hover:!text-midnight'" }}
+          {{ /if }}
+        </div>
+      </div>
       {{ partial:components/cards/tile :hasInline="false" }}
     {{ /collection:arguments }}
   {{ /partial:components/cards/index }}
