@@ -16,6 +16,7 @@
 
   {{ partial:components/cards/index :class="'sm:hidden'" }}
     {{ collection:arguments sort="order" }}
+      {{ partial:components/cards/tile :hasInline="false" }}
       <div class="{{ if theme }} theme-{{ theme }} {{ /if }} w-full hidden" data-slug-detail="{{ slug }}">
         <div class="container py-35 lg:py-60 xl:py-90 {{ if theme }} text-white {{ /if }}">
           {{ partial:layout/article }}
@@ -28,7 +29,6 @@
           {{ /if }}
         </div>
       </div>
-      {{ partial:components/cards/tile :hasInline="false" }}
     {{ /collection:arguments }}
   {{ /partial:components/cards/index }}
 
