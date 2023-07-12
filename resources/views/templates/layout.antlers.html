@@ -24,6 +24,12 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 {{ vite src="resources/js/app.js" }}
+</head>
+<body class="font-light leading-tight text-midnight text-xl md:text-2xl xl:text-3xl">
+  {{ partial:layout/header }}
+  {{ template_content }}
+  {{ partial:layout/footer }}
+</body>
 {{# <script>
 var _paq = window._paq = window._paq || [];
 _paq.push(['trackPageView']);
@@ -36,10 +42,4 @@ _paq.push(['enableLinkTracking']);
   g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
 })();
 </script> #}}
-</head>
-<body class="font-light leading-tight text-midnight text-xl md:text-2xl xl:text-3xl">
-  {{ partial:layout/header }}
-  {{ template_content }}
-  {{ partial:layout/footer }}
-</body>
 </html>
