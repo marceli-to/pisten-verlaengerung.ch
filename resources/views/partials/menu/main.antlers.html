@@ -9,6 +9,7 @@
 <div class="menu" data-menu>
   <nav class="container">
     <ul class="sm:flex sm:justify-between sm:border-b-12 sm:border-cloud-mist sm:py-8">
+      {{ partial:menu/item :text="'Home'" :url="'/'" target="_self" class="sm:hidden" }}
       {{ nav:collection:pages sort="order" is_menu:is="1" }}
         {{ partial:menu/item :text="title" :url="url" target="_self" }}
       {{ /nav:collection:pages }}
