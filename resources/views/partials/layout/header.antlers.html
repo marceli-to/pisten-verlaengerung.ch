@@ -1,17 +1,13 @@
 {{# <header class="container pt-20 md:pt-30 md:pb-30 xl:pt-40 xl:pb-50"> #}}
 <header class="container">
   <div class="flex justify-center">
-      {{ nocache }}
-        {{ if is_homepage }}
-          <a href="/" class="block w-full max-w-[240px] md:max-w-[320px] xl:max-w-[440px] h-auto" title="Startseite Ja zur Pistenverlängerung">
-            {{ partial:icons/logos/pistenverlaengerung-animated }}
-          </a>
-        {{ else }}
-          <a href="/" class="block w-full max-w-[240px] md:max-w-[320px] xl:max-w-[440px] h-auto" title="Startseite Ja zur Pistenverlängerung">
-            {{ partial:icons/logos/pistenverlaengerung }}
-          </a>
-        {{ /if }}
-      {{ /nocache }}
+    <a href="/" class="block w-full max-w-[240px] md:max-w-[320px] xl:max-w-[440px] h-auto" title="Startseite Ja zur Pistenverlängerung">
+      {{ if is_homepage }}
+        {{ partial:icons/logos/pistenverlaengerung-animated }}
+      {{ else }}
+        {{ partial:icons/logos/pistenverlaengerung }}
+      {{ /if }}
+    </a>
   </div>
 </header>
 {{ partial:menu/main }}
