@@ -27,15 +27,15 @@
 @media only screen and (max-width: 600px) {
 
   .wrapper {
-    width: 85% !important;
+    width: 95% !important;
   }
 
   .header {
-    padding: 30px !important;
+    padding: 30px 40px !important;
   }
 
   .content-cell {
-    padding: 25px !important;
+    padding: 25px 40px !important;
   }
 
   .inner-body {
