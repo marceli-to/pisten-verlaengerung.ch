@@ -112,8 +112,11 @@ import 'swiper/css/navigation';
 
     // on load check if the url contains 'gute-gruende' and a data-slug-detail
     const url = window.location.href;
-    const urlParts = url.split('/');
-    if (urlParts.includes('gute-gruende/')) {
+    const pattern = /^https?:\/\/(?:.*\.)?pisten-verlaengerung\.ch\/gute-gruende(\/.*)?$/;
+
+
+    // urlParts should include 'gute-gruende' but not just 'gute-gruende'
+    if (pattern.test(url)) {
       // there are multiple elements with the same data-slug-detail
       // so we need to add the class hidden to all elements with data-slug-detail
       document.querySelectorAll(`[data-slug-detail="${urlParts[urlParts.length - 1]}"]`).forEach(function(item) {
