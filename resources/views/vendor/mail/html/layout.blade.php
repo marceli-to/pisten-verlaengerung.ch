@@ -31,11 +31,11 @@
   }
 
   .header {
-    padding: 30px 0 !important;
+    padding: 30px !important;
   }
 
   .content-cell {
-    padding: 25px 0 !important;
+    padding: 25px !important;
   }
 
   .inner-body {
