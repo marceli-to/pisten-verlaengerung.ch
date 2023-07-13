@@ -6,6 +6,10 @@
   @apply block;
 }
 
+.btn-menu.is-active {
+  @apply bg-transparent;
+}
+
 .btn-menu.is-active .icon-cross {
   @apply block;
 }
