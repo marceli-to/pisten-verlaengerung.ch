@@ -67,53 +67,9 @@ import 'swiper/css/navigation';
       }
     });
 
-    // New part //////////
-    // on click 'data-tile-detail' log the dataset to the console
-    // document.querySelectorAll(`[${selectors.tileDetail}]`).forEach(function(tileDetail) {
-    //   tileDetail.addEventListener('click', function(e) {
-
-    //     // abort if the current screen size is bigger than 400px
-    //     if (window.innerWidth > 400) {
-    //       return;
-    //     }
-
-    //     //e.preventDefault();
-
-    //     // get the element with a matchin data-slug-detail
-    //     const slugDetail = document.querySelector(`[data-slug-detail="${tileDetail.dataset.tileDetail}"]`);
-        
-    //     // add class hidden to all elements with data-slug-detail
-    //     // document.querySelectorAll(`[data-slug-detail]`).forEach(function(item) {
-    //     //   item.classList.add('hidden');
-    //     // });
-        
-    //     // remove the hidden class
-    //     slugDetail.classList.remove('hidden');
-
-    //     // // update replace the last part of the url with the data-slug-detail
-    //     // const url = window.location.href;
-    //     // const urlParts = url.split('/');
-    //     // urlParts.pop();
-
-    //     // // if url parts contains 'gute-gruende' just add the tileDetail.dataset.tileDetail
-    //     // if (urlParts.includes('gute-gruende')) {
-    //     //   urlParts.push(tileDetail.dataset.tileDetail);
-    //     // } else {
-    //     //   // else add 'gute-gruende' and the tileDetail.dataset.tileDetail
-    //     //   urlParts.push('gute-gruende');
-    //     //   urlParts.push(tileDetail.dataset.tileDetail);
-    //     // }
-    //     // const newUrl = urlParts.join('/');
-    //     // window.history.pushState({}, '', newUrl);
-    //   });
-    // });
-    //////////////////////
-
-
     // on load check if the url contains 'gute-gruende' and a data-slug-detail
     const url = window.location.href;
     const urlParts = url.split('/');
-    console.log(urlParts);
 
     // urlParts should include 'gute-gruende' but not just 'gute-gruende'
     if (urlParts.includes('gute-gruende') && urlParts.length > 4) {
